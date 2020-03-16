@@ -40,11 +40,11 @@ class HashTableOA(MapInterface):
         self.keyComparator = keyComparator
         self.valueComparator = valueComparator
 
-    def linearHashFunction(self, key, arraySize) -> int:
-        return int(hash(key) % arraySize)
+    def linearHashFunction(self, key, array) -> int:
+        return int(hash(key) % len(array))
 
-    def squareHashFunction(self, key, arraySize) -> int:
-        return int((math.pow(hash(key), 2)) % arraySize)
+    def squareHashFunction(self, key, array) -> int:
+        return int((math.pow(hash(key), 2)) % len(array))
 
     def size(self) -> int:
         return self.currentSize
@@ -56,25 +56,25 @@ class HashTableOA(MapInterface):
         result = None
         # --------------------------------------
         # We hash to the first possible location
-        firstPosition = self.linearHashFuntion(key, len(self.buckets))
+        firstPosition = self.linearHashFunction(key, self.buckets)
         # We acquire the first object in said hash position
         elementFirstPosition = self.buckets[firstPosition]
-        if elementFirstPosition is not None and elementFirstPosition.getKey() is key:
+        if elementFirstPosition.isStatus() is True and elementFirstPosition.getKey() is key:
             result = elementFirstPosition.getValue()
             return result
         # ---------------------------------------
         # If first hash doesn't return proceed to hash again
-        secondPosition = self.squareHashFuntion(key, len(self.buckets))
+        secondPosition = self.squareHashFunction(key, self.buckets)
         # We acquire the first object in second hash position
         elementSecondPosition = self.buckets[secondPosition]
-        if elementSecondPosition is not None and elementSecondPosition.getKey() is key:
+        if elementSecondPosition.isStatus() is True and elementSecondPosition.getKey() is key:
             result = elementSecondPosition.getValue()
             return result
         # ---------------------------------------
         # If it fails to get object in second hash we proceed to probe in linear fashion
-        tempIndex = (self.linearHashFuntion(key, len(self.buckets)) + 1) % len(self.buckets)
-        while tempIndex != self.linearHashFuntion(key, len(self.buckets)):
-            if self.buckets[tempIndex] is not None and self.buckets[tempIndex].getKey() is key:
+        tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
+        while tempIndex != self.linearHashFunction(key, self.buckets):
+            if self.buckets[tempIndex].isStatus() is True and self.buckets[tempIndex].getKey() is key:
                 result = self.buckets[tempIndex].getValue()
                 return result
             tempIndex = (tempIndex + 1) % len(self.buckets)
@@ -94,24 +94,23 @@ class HashTableOA(MapInterface):
             self.__reallocate()
         # ---------------------------------------
         # We begin by first locating first  hashing position
-        firstFreePosition = self.linearHashFuntion(key, len(self.buckets))
+        firstFreePosition = self.linearHashFunction(key, self.buckets)
         entryIndex = firstFreePosition
-        if self.buckets[entryIndex] is not None or self.buckets[entryIndex].getKey() is not key:
+        if self.buckets[entryIndex] is not None and self.buckets[entryIndex].isStatus() is not False:
             # ---------------------------------------
             # If first hashing position fails we proceed to second hash
-            secondFreePosition = self.squareHashFuntion(key, len(self.buckets))
+            secondFreePosition = self.squareHashFunction(key, self.buckets)
             entryIndex = secondFreePosition
-            if self.buckets[entryIndex] is not None or self.buckets[entryIndex].getKey() is not key:
+            if self.buckets[entryIndex] is not None and self.buckets[entryIndex].isStatus() is not False:
                 # ---------------------------------------
                 # If second hash fails we proceed to linear probing
-                tempIndex = (self.linearHashFuntion(key, len(self.buckets)) + 1) % len(self.buckets)
-                while tempIndex != self.linearHashFuntion(key, len(self.buckets)):
+                tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
+                while tempIndex != self.linearHashFunction(key, self.buckets):
                     # If empty space is found then set index to such spot
                     if self.buckets[tempIndex] is None:
                         entryIndex = tempIndex
                         break
                     tempIndex = (tempIndex + 1) % len(self.buckets)
-
         self.buckets[entryIndex] = newEntry
         self.currentSize += 1
         return True
@@ -121,33 +120,33 @@ class HashTableOA(MapInterface):
         temporalSize = len(self.buckets) * 2
         temp = HashTableOA(temporalSize, self.keyComparator, self.valueComparator)
         for element in self.buckets:
-            if element is not None and element.getStatus() is True:
+            if element is not None and element.isStatus() is True:
                 temp.put(element.getKey(), element.getValue())
         self.buckets = temp.buckets
 
     def remove(self, key) -> object:
         # We begin search of the element with first hash functions
-        firstPosition = self.linearHashFunction(key, len(self.buckets))
+        firstPosition = self.linearHashFunction(key, self.buckets)
         eliminateIndex = firstPosition
         firstElement = self.buckets[firstPosition]
-        if firstElement is None or firstElement.getKey() is not key:
+        if firstElement.isStatus() is False or firstElement.getKey() is not key:
             # If first hashing fails proceed to second hashing
-            secondPosition = self.squareHashFunction(key, len(self.buckets))
+            secondPosition = self.squareHashFunction(key, self.buckets)
             secondElement = self.buckets[secondPosition]
             eliminateIndex = secondPosition
-            if secondElement is None or secondElement.getKey() is not key:
+            if secondElement.isStatus() is False or secondElement.getKey() is not key:
                 # If second hashing fails we proceed into linear probing
-                tempIndex = (self.linearHashFuntion(key, len(self.buckets)) + 1) % len(self.buckets)
-                while tempIndex != self.linearHashFuntion(key, len(self.buckets)):
+                tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
+                while tempIndex != self.linearHashFunction(key, self.buckets):
                     # If specified loc
-                    if self.buckets[tempIndex] is not None and self.buckets[tempIndex].getKey() is key:
+                    if self.buckets[tempIndex].isStatus() is True and self.buckets[tempIndex].getKey() is key:
                         eliminateIndex = tempIndex
                         break
                     tempIndex = (tempIndex + 1) % len(self.buckets)
                 # if linear probe fails the object doesn't exist
-                if tempIndex == self.linearHashFuntion(key, len(self.buckets)):
+                if tempIndex == self.linearHashFunction(key, self.buckets):
                     return None
-        result = self.buckets[eliminateIndex]
+        result = self.buckets[eliminateIndex].getValue()
         self.buckets[eliminateIndex] = MapEntry()
         self.currentSize -= 1
         return result
@@ -156,6 +155,7 @@ class HashTableOA(MapInterface):
         tempIndex = 0
         while tempIndex < len(self.buckets):
             self.buckets[tempIndex] = MapEntry()
+            tempIndex += 1
         self.currentSize = 0
 
     def containsKey(self, key) -> bool:
@@ -169,10 +169,14 @@ class HashTableOA(MapInterface):
 
 
 def main():
-    print("Hello")
-    t = HashTableOA()
+    t = HashTableOA(2)
     t.put("var1", 1)
+    t.put("var2", 1)
+    t.put("var3", 1)
+    t.remove("var3")
     print(t.get("var1"))
+    t.makeEmpty()
+
 
 
 if __name__ == '__main__':
