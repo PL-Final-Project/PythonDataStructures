@@ -1,4 +1,5 @@
 from Map import MapInterface
+from SinglyLinkedList import SinglyLinkedList
 import math
 
 
@@ -162,10 +163,20 @@ class HashTableOA(MapInterface):
         return self.get(key) is not None
 
     def getKeys(self):
-        pass
+        result = SinglyLinkedList()
+        # the result will be a list with all the keys
+        for element in self.buckets:
+            if element is not None and element.isStatus() is True:
+                result.add(element.getKey())
+        return
 
     def getValues(self):
-        pass
+        result = SinglyLinkedList()
+        # the result will be a list with all the values
+        for element in self.buckets:
+            if element is not None and element.isStatus() is True:
+                result.add(element.getValue())
+        return result
 
 
 def main():

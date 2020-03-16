@@ -7,14 +7,6 @@ class MapInterface(ABC):
         pass
 
     @abstractmethod
-    def linearHashFunction(self, key, arraySize) -> int:
-        pass
-
-    @abstractmethod
-    def squareHashFunction(self, key, arraySize) -> int:
-        pass
-
-    @abstractmethod
     def isEmpty(self):
         pass
 
