@@ -1,39 +1,67 @@
-from abc import abstractmethod, ABC
+from MapInterface import MapInterface
+from MapEntry import MapEntry
+from SinglyLinkedList import SinglyLinkedList
 
 
-class MapInterface(ABC):
-    @abstractmethod
+class Map(MapInterface):
+    def __init__(self):
+        self.__elements = SinglyLinkedList()
+        self.__currentSize = 0
+
     def size(self):
-        pass
+        return self.__elements.size()
 
-    @abstractmethod
     def isEmpty(self):
-        pass
+        return self.size() != 0
 
-    @abstractmethod
     def get(self, key):
-        pass
+        tempIndex = 0
+        while tempIndex < self.__elements.size():
+            element = self.__elements.get(tempIndex)
+            if element is not None and element.isStatus() is True and element.getKey() is key:
+                return element.getValue()
+        return None
 
-    @abstractmethod
     def put(self, key, value):
-        pass
+        if self.containsKey(key) is True:
+            self.remove(key)
+        self.__elements.add(MapEntry(key, value, True))
+        return True
 
-    @abstractmethod
     def remove(self, key):
-        pass
+        result = None
+        tempIndex = 0
+        while tempIndex < self.__elements.size():
+            element = self.__elements.get(tempIndex)
+            if element is not None and element.isStatus() is True and element.getKey() is key:
+                result = element.getValue()
+                self.__elements.remove(tempIndex)
+                return result
+        return result
 
-    @abstractmethod
     def makeEmpty(self):
-        pass
+        self.__elements.clear()
+        self.__currentSize = 0
 
-    @abstractmethod
     def containsKey(self, key):
-        pass
+        return self.get(key) is not None
 
-    @abstractmethod
     def getKeys(self):
-        pass
+        result = SinglyLinkedList()
+        tempIndex = 0
+        while tempIndex < self.__elements.size():
+            element = self.__elements.get(tempIndex)
+            if element is not None and element.isStatus() is True:
+                result.add(element.getKey())
+            tempIndex += 1
+        return result
 
-    @abstractmethod
     def getValues(self):
-        pass
+        result = SinglyLinkedList()
+        tempIndex = 0
+        while tempIndex < self.__elements.size():
+            element = self.__elements.get(tempIndex)
+            if element is not None and element.isStatus() is True:
+                result.add(element.getValue())
+            tempIndex += 1
+        return result

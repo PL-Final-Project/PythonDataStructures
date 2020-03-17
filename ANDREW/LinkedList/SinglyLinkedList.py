@@ -9,6 +9,10 @@ class Node:
 # Defines the SinglyLinkedList class and its methods.
 class SinglyLinkedList:
     def __init__(self):
+        """
+
+        :rtype: object
+        """
         self.head = None
         self.currentSize = 0
 

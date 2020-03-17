@@ -1,36 +1,14 @@
-from Map import MapInterface
+import random
+
+from MapInterface import MapInterface
+from MapEntry import MapEntry
 from SinglyLinkedList import SinglyLinkedList
-
-
-class MapEntry:
-    def __init__(self, key=None, value=None, status=False):
-        self.key = key
-        self.value = value
-        self.status = status
-
-    def isStatus(self):
-        return self.status
-
-    def setStatus(self, status):
-        self.status = status
-
-    def getKey(self):
-        return self.key
-
-    def setKey(self, key):
-        self.key = key
-
-    def getValue(self):
-        return self.value
-
-    def setValue(self, value):
-        self.value = value
 
 
 class HashTableSC(MapInterface):
     def __init__(self, size=10, keyComparator=None, valueComparator=None):
         self.buckets = [None] * size
-        firstTempIndex = 0
+        firstTempIndex: int = 0
         while firstTempIndex < size:
             self.buckets[firstTempIndex] = SinglyLinkedList()
             firstTempIndex += 1
@@ -100,13 +78,14 @@ class HashTableSC(MapInterface):
             if element is not None and element.isStatus() is True and element.getKey() is key:
                 result = element.getValue()
                 firstList.remove(tempIndex)
+                break
             tempIndex += 1
         # if not found it will return None
         self.currentSize -= 1
         return result
 
     def makeEmpty(self):
-        tempIndex = 0
+        tempIndex: int = 0
         while tempIndex < len(self.buckets):
             self.buckets[tempIndex] = SinglyLinkedList()
             tempIndex += 1
@@ -152,5 +131,17 @@ def main():
     t.makeEmpty()
 
 
+def thousandCases():
+    testing = HashTableSC()
+    letters = ["A", "B", "C", "D", "F", "G", "H", "I"]
+    for num in range(999):
+        temp = ""
+        for numbers in range(3):
+            temp += letters[random.randint(0, len(letters) - 1)]
+        testing.put(temp, num)
+    allkeys = testing.getKeys()
+    testing.makeEmpty()
+
+
 if __name__ == '__main__':
-    main()
+    thousandCases()

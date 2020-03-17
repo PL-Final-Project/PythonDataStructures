@@ -1,31 +1,9 @@
-from Map import MapInterface
-from SinglyLinkedList import SinglyLinkedList
 import math
+import random
 
-
-class MapEntry:
-    def __init__(self, key=None, value=None, status=False):
-        self.key = key
-        self.value = value
-        self.status = status
-
-    def isStatus(self):
-        return self.status
-
-    def setStatus(self, status):
-        self.status = status
-
-    def getKey(self):
-        return self.key
-
-    def setKey(self, key):
-        self.key = key
-
-    def getValue(self):
-        return self.value
-
-    def setValue(self, value):
-        self.value = value
+from MapInterface import MapInterface
+from MapEntry import MapEntry
+from SinglyLinkedList import SinglyLinkedList
 
 
 class HashTableOA(MapInterface):
@@ -108,7 +86,7 @@ class HashTableOA(MapInterface):
                 tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
                 while tempIndex != self.linearHashFunction(key, self.buckets):
                     # If empty space is found then set index to such spot
-                    if self.buckets[tempIndex] is None:
+                    if self.buckets[tempIndex] is not None and self.buckets[tempIndex].isStatus() is False:
                         entryIndex = tempIndex
                         break
                     tempIndex = (tempIndex + 1) % len(self.buckets)
@@ -168,7 +146,7 @@ class HashTableOA(MapInterface):
         for element in self.buckets:
             if element is not None and element.isStatus() is True:
                 result.add(element.getKey())
-        return
+        return result
 
     def getValues(self):
         result = SinglyLinkedList()
@@ -179,16 +157,35 @@ class HashTableOA(MapInterface):
         return result
 
 
+# TESTING
 def main():
     t = HashTableOA(2)
     t.put("var1", 1)
     t.put("var2", 1)
     t.put("var3", 1)
     t.remove("var3")
+    t.put("var3", 1)
+    t.put("var4", 1)
+    t.put("var5", 1)
+    t.put("var6", 1)
+    t.put("var7", 1)
+    t.put("var8", 1)
     print(t.get("var1"))
     t.makeEmpty()
 
 
+def thousandCases():
+    testing = HashTableOA()
+    letters = ["A", "B", "C", "D", "F", "G", "H", "I"]
+    for num in range(999):
+        temp = ""
+        for numbers in range(3):
+            temp += letters[random.randint(0, len(letters) - 1)]
+        testing.put(temp, num)
+    allkeys = testing.getKeys()
+    testing.makeEmpty()
+
 
 if __name__ == '__main__':
-    main()
+    # main()
+    thousandCases()
