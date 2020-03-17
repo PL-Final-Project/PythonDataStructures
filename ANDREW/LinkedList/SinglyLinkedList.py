@@ -1,5 +1,7 @@
 # Created by Andrew Gonzalez (GitHub: andrewgonzalez4) using Python and Vim as a text editor
 # Defines the Node class in order to be able to create nodes and add them to the SLL.
+
+
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -19,12 +21,12 @@ class SinglyLinkedList:
     # The add method takes and item and adds it at the end of the list.
     def add(self, newItem):
         if newItem is None:
-            return
+            return False
         NewNode = Node(newItem)
         if self.head is None:
             self.head = NewNode
             self.currentSize = self.currentSize + 1
-            return
+            return True
         last = self.head
         while last.next:
             last = last.next
@@ -41,9 +43,11 @@ class SinglyLinkedList:
     # The isEmpty method takes the list and checks if its empty.
     def isEmpty(self):
         if self.head is None:
-            print("Empty")
+            # print("Empty")
+            return True
         else:
-            print("Not empty")
+            # print("Not empty")
+            return False
 
     # The clear method takes the list and clears it.
     def clear(self):
@@ -66,19 +70,18 @@ class SinglyLinkedList:
 
     # The size method returns the size of the list.
     def size(self):
-        print(self.currentSize)
         return self.currentSize
 
     # The removeLast method removes the element at the last index of the list.
     def removeLast(self):
-        if self.head == None:
+        if self.head is None:
             return None
-        if self.head.next == None:
+        if self.head.next is None:
             self.head = None
             self.currentSize = self.currentSize - 1
             return None
         second_last = self.head
-        while (second_last.next.next):
+        while second_last.next.next:
             second_last = second_last.next
         second_last.next = None
         self.currentSize = self.currentSize - 1
