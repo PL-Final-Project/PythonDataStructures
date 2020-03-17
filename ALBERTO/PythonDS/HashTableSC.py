@@ -20,7 +20,7 @@ class HashTableSC(MapInterface):
         return self.currentSize
 
     def isEmpty(self) -> bool:
-        return self.size() != 0
+        return self.size() == 0
 
     def linearHashFunction(self, key, array) -> int:
         return int(hash(key) % len(array))
