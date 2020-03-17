@@ -25,6 +25,9 @@ class HashTableOA(MapInterface):
     def squareHashFunction(self, key, array) -> int:
         return int((math.pow(hash(key), 2)) % len(array))
 
+    def cubicHashFunction(self, key, array) -> int:
+        return int((math.pow(hash(key), 3)) % len(array))
+
     def size(self) -> int:
         return self.currentSize
 
@@ -50,7 +53,15 @@ class HashTableOA(MapInterface):
             result = elementSecondPosition.getValue()
             return result
         # ---------------------------------------
-        # If it fails to get object in second hash we proceed to probe in linear fashion
+        # If second hash doesn't return proceed to hash again
+        thirdPosition = self.cubicHashFunction(key, self.buckets)
+        # We acquire the first object in third hash position
+        elementThirdPosition = self.buckets[thirdPosition]
+        if elementThirdPosition.isStatus() is True and elementThirdPosition.getKey() is key:
+            result = elementThirdPosition.getValue()
+            return result
+        # ---------------------------------------
+        # If it fails to get object in third hash we proceed to probe in linear fashion
         tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
         while tempIndex != self.linearHashFunction(key, self.buckets):
             if self.buckets[tempIndex].isStatus() is True and self.buckets[tempIndex].getKey() is key:
@@ -82,14 +93,19 @@ class HashTableOA(MapInterface):
             entryIndex = secondFreePosition
             if self.buckets[entryIndex] is not None and self.buckets[entryIndex].isStatus() is not False:
                 # ---------------------------------------
-                # If second hash fails we proceed to linear probing
-                tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
-                while tempIndex != self.linearHashFunction(key, self.buckets):
-                    # If empty space is found then set index to such spot
-                    if self.buckets[tempIndex] is not None and self.buckets[tempIndex].isStatus() is False:
-                        entryIndex = tempIndex
-                        break
-                    tempIndex = (tempIndex + 1) % len(self.buckets)
+                # If second hashing position fails we proceed to second hash
+                thirdFreePosition = self.cubicHashFunction(key, self.buckets)
+                entryIndex = thirdFreePosition
+                if self.buckets[entryIndex] is not None and self.buckets[entryIndex].isStatus() is not False:
+                    # ---------------------------------------
+                    # If third hash fails we proceed to linear probing
+                    tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
+                    while tempIndex != self.linearHashFunction(key, self.buckets):
+                        # If empty space is found then set index to such spot
+                        if self.buckets[tempIndex] is not None and self.buckets[tempIndex].isStatus() is False:
+                            entryIndex = tempIndex
+                            break
+                        tempIndex = (tempIndex + 1) % len(self.buckets)
         self.buckets[entryIndex] = newEntry
         self.currentSize += 1
         return True
@@ -114,14 +130,19 @@ class HashTableOA(MapInterface):
             secondElement = self.buckets[secondPosition]
             eliminateIndex = secondPosition
             if secondElement.isStatus() is False or secondElement.getKey() is not key:
-                # If second hashing fails we proceed into linear probing
-                tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
-                while tempIndex != self.linearHashFunction(key, self.buckets):
-                    # If specified loc
-                    if self.buckets[tempIndex].isStatus() is True and self.buckets[tempIndex].getKey() is key:
-                        eliminateIndex = tempIndex
-                        break
-                    tempIndex = (tempIndex + 1) % len(self.buckets)
+                # If first hashing fails proceed to second hashing
+                thirdPosition = self.cubicHashFunction(key, self.buckets)
+                thirdElement = self.buckets[thirdPosition]
+                eliminateIndex = thirdPosition
+                if thirdElement.isStatus() is False or thirdElement.getKey() is not key:
+                    # If third hashing fails we proceed into linear probing
+                    tempIndex = (self.linearHashFunction(key, self.buckets) + 1) % len(self.buckets)
+                    while tempIndex != self.linearHashFunction(key, self.buckets):
+                        # If specified loc
+                        if self.buckets[tempIndex].isStatus() is True and self.buckets[tempIndex].getKey() is key:
+                            eliminateIndex = tempIndex
+                            break
+                        tempIndex = (tempIndex + 1) % len(self.buckets)
                 # if linear probe fails the object doesn't exist
                 if tempIndex == self.linearHashFunction(key, self.buckets):
                     return None
@@ -159,14 +180,13 @@ class HashTableOA(MapInterface):
 
 # TESTING
 def main():
-    t = HashTableOA(2)
+    t = HashTableOA(8)
     t.put("var1", 1)
     t.put("var2", 1)
     t.put("var3", 1)
-    t.remove("var3")
-    t.put("var3", 1)
     t.put("var4", 1)
     t.put("var5", 1)
+    t.put("var9", 1)
     t.put("var6", 1)
     t.put("var7", 1)
     t.put("var8", 1)
@@ -175,11 +195,11 @@ def main():
 
 
 def thousandCases():
-    testing = HashTableOA()
-    letters = ["A", "B", "C", "D", "F", "G", "H", "I"]
+    testing = HashTableOA(20)
+    letters = ["A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
     for num in range(999):
         temp = ""
-        for numbers in range(3):
+        for numbers in range(6):
             temp += letters[random.randint(0, len(letters) - 1)]
         testing.put(temp, num)
     allkeys = testing.getKeys()
