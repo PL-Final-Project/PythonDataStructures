@@ -2,11 +2,14 @@ from abc import ABC
 
 from .QueueInterface import QueueInterface
 
+
 class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
         self.prev = None
+
+
 class DoublyLinkedQueue(QueueInterface, ABC):
 
     def __init__(self):
@@ -55,9 +58,3 @@ class DoublyLinkedQueue(QueueInterface, ABC):
         while self.dequeue() is not None:
             x = 0
         return
-
-
-
-
-
-
