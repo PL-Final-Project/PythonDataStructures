@@ -9,6 +9,9 @@
     <content url="file://$MODULE_DIR$/../../ANDREW/LinkedList">
       <sourceFolder url="file://$MODULE_DIR$/../../ANDREW/LinkedList" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../../FRANCISCO">
+      <sourceFolder url="file://$MODULE_DIR$/../../FRANCISCO" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (PythonDS)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -18,5 +18,5 @@ UPDATE:
 
 MAP
 
--It's basically a list that has objects separated by the keys, no repetitions of them ares allowed. (Implementation deletes previous item with the same key in case these collide, this will be changed in the future)
+-It's basically a list that has objects separated by the keys, no repetitions of them are allowed. (Implementation deletes previous item with the same key in case these collide, this will be changed in the future)
 

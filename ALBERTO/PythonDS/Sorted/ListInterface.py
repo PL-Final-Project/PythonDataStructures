@@ -22,7 +22,6 @@ class SortedListInterface(ABC):
     def get_obj(self, obj):
         pass
 
-
     @abstractmethod
     def add(self, obj):
         pass
@@ -46,4 +45,3 @@ class SortedListInterface(ABC):
     @abstractmethod
     def lastIndexOf(self, obj):
         pass
-
