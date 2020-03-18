@@ -108,6 +108,11 @@ class SortedArrayList(Interface):
             tempIndex -= 1
         return -1
 
+    def printValues(self):
+        for element in self.elements:
+            if element is not None:
+                print(element)
+
 
 def main():
     list1 = SortedArrayList(StringComparator(), 2)

@@ -1,7 +1,7 @@
 from Comparator import Comparator
 
 
-class StringComparator(Comparator):
+class NumberComparator(Comparator):
     def compareTo(self, a: int, b: int):
         if a == b:
             return 0

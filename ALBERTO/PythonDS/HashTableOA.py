@@ -4,6 +4,9 @@ import random
 from MapInterface import MapInterface
 from MapEntry import MapEntry
 from SinglyLinkedList import SinglyLinkedList
+from Sorted.StringComparator import StringComparator
+from Sorted.NumberComparator import NumberComparator
+from Sorted.SortedArrayList import SortedArrayList
 
 
 class HashTableOA(MapInterface):
@@ -144,7 +147,7 @@ class HashTableOA(MapInterface):
                             break
                         tempIndex = (tempIndex + 1) % len(self.buckets)
                 # if linear probe fails the object doesn't exist
-                if tempIndex == self.linearHashFunction(key, self.buckets):
+                if self.linearHashFunction(key, self.buckets) == tempIndex:
                     return None
         result = self.buckets[eliminateIndex].getValue()
         self.buckets[eliminateIndex] = MapEntry()
@@ -157,6 +160,7 @@ class HashTableOA(MapInterface):
             self.buckets[tempIndex] = MapEntry()
             tempIndex += 1
         self.currentSize = 0
+        return
 
     def containsKey(self, key) -> bool:
         return self.get(key) is not None
@@ -177,10 +181,26 @@ class HashTableOA(MapInterface):
                 result.add(element.getValue())
         return result
 
+    def getSortedKeys(self):
+        result = SortedArrayList(self.keyComparator)
+        # the result will be a list with all the keys
+        for element in self.buckets:
+            if element is not None and element.isStatus() is True:
+                result.add(element.getKey())
+        return result
+
+    def getSortedValues(self):
+        result = SortedArrayList(self.valueComparator)
+        # the result will be a list with all the values
+        for element in self.buckets:
+            if element is not None and element.isStatus() is True:
+                result.add(element.getValue())
+        return result
+
 
 # TESTING
 def main():
-    t = HashTableOA(8)
+    t = HashTableOA(8, StringComparator(), NumberComparator())
     t.put("var1", 1)
     t.put("var2", 1)
     t.put("var3", 1)
@@ -191,18 +211,22 @@ def main():
     t.put("var7", 1)
     t.put("var8", 1)
     print(t.get("var1"))
+    list1 = t.getSortedKeys()
+    list1.printValues()
     t.makeEmpty()
 
 
 def thousandCases():
-    testing = HashTableOA(20)
-    letters = ["A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"]
+    testing = HashTableOA(20, StringComparator(), NumberComparator())
+    letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+               "V", "W", "X", "Y", "Z"]
     for num in range(999):
         temp = ""
-        for numbers in range(6):
+        for numbers in range(26):
             temp += letters[random.randint(0, len(letters) - 1)]
         testing.put(temp, num)
-    allkeys = testing.getKeys()
+    allKeys = testing.getSortedKeys()
+    allKeys.printValues()
     testing.makeEmpty()
 
 
