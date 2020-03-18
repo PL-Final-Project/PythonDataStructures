@@ -20,7 +20,7 @@ class HashTableSC(MapInterface):
         return self.currentSize
 
     def isEmpty(self) -> bool:
-        return self.size() != 0
+        return self.size() == 0
 
     def linearHashFunction(self, key, array) -> int:
         return int(hash(key) % len(array))
@@ -36,12 +36,33 @@ class HashTableSC(MapInterface):
             if element.isStatus() is True and element.getKey() is key:
                 return element.getValue()
             tempIndex += 1
-        # If element is not on the list it doesn't exist
+        """
+        This code below would be detrimental to the performance of the hash table. We assume that it can always
+        be found in the first hashing position, maybe not on index 0 of the linked list but close enough to reduce
+        the complexity to a worst case scenario of  O(N) (N being the size of the linked list) and not a O(N*M*P*Q*...)
+        """
+        # If not found on designated list, check on all lists
+        # index_1 = 0
+        # while index_1 < len(self.buckets):
+        #     index_2 = 0
+        #     currList = self.buckets[index_1]
+        #     while index_2 < currList.size():
+        #         visibleElement = currList.get(index_2)
+        #         if visibleElement.isStatus() is True and visibleElement.getKey() is True:
+        #             return visibleElement.getValue()
+        #         index_2 += 1
+        #     index_1 += 1
+
+        # If element is not on any list it doesn't exist
         return None
 
     def put(self, key, value):
         # Creation of new element to be included in Hash Table
         newEntry = MapEntry(key, value, True)
+        # Check if element doesn't exist
+        if self.containsKey(key) is True:
+            # if it does exist delete
+            self.remove(key)
         # We check if the existing ratio between elements and spaces hasn't surpassed 70%
         if self.size() / len(self.buckets) >= 0.7:
             # if surpassed reAllocate the hash table
@@ -78,10 +99,10 @@ class HashTableSC(MapInterface):
             if element is not None and element.isStatus() is True and element.getKey() is key:
                 result = element.getValue()
                 firstList.remove(tempIndex)
+                self.currentSize -= 1
                 break
             tempIndex += 1
         # if not found it will return None
-        self.currentSize -= 1
         return result
 
     def makeEmpty(self):
@@ -96,7 +117,7 @@ class HashTableSC(MapInterface):
 
     def getKeys(self):
         # The method returns a list with all the keys
-        result = SinglyLinkedList
+        result = SinglyLinkedList()
         for lists in self.buckets:
             if lists is not None:
                 tempIndex = 0
@@ -109,7 +130,7 @@ class HashTableSC(MapInterface):
 
     def getValues(self):
         # The method returns a list with all the values
-        result = SinglyLinkedList
+        result = SinglyLinkedList()
         for lists in self.buckets:
             if lists is not None:
                 tempIndex = 0
@@ -139,7 +160,8 @@ def thousandCases():
         for numbers in range(3):
             temp += letters[random.randint(0, len(letters) - 1)]
         testing.put(temp, num)
-    allkeys = testing.getKeys()
+    allvalues = testing.getValues()
+    print(allvalues.size())
     testing.makeEmpty()
 
 
