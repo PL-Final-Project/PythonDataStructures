@@ -4,6 +4,7 @@ import random
 from MapInterface import MapInterface
 from MapEntry import MapEntry
 from SinglyLinkedList import SinglyLinkedList
+from Sorted.Comparator import Comparator
 from Sorted.StringComparator import StringComparator
 from Sorted.NumberComparator import NumberComparator
 from Sorted.SortedArrayList import SortedArrayList
@@ -11,7 +12,7 @@ from Sorted.SortedArrayList import SortedArrayList
 
 class HashTableOA(MapInterface):
 
-    def __init__(self, size=10, keyComparator=None, valueComparator=None):
+    def __init__(self, size: int = 10, keyComparator: Comparator = None, valueComparator: Comparator = None):
         """
         :type keyComparator: object
         :type valueComparator: object

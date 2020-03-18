@@ -2,11 +2,15 @@ import random
 
 from MapInterface import MapInterface
 from MapEntry import MapEntry
+from Sorted.Comparator import Comparator
+from Sorted.StringComparator import StringComparator
+from Sorted.NumberComparator import NumberComparator
+from Sorted.SortedArrayList import SortedArrayList
 from SinglyLinkedList import SinglyLinkedList
 
 
 class HashTableSC(MapInterface):
-    def __init__(self, size=10, keyComparator=None, valueComparator=None):
+    def __init__(self, size: int = 10, keyComparator: Comparator = None, valueComparator: Comparator = None):
         self.buckets = [None] * size
         firstTempIndex: int = 0
         while firstTempIndex < size:
@@ -141,6 +145,32 @@ class HashTableSC(MapInterface):
                     tempIndex += 1
         return result
 
+    def getSortedKeys(self):
+        # The method returns a list with all the keys
+        result = SortedArrayList(self.keyComparator)
+        for lists in self.buckets:
+            if lists is not None:
+                tempIndex = 0
+                while tempIndex < lists.size():
+                    element = lists.get(tempIndex)
+                    if element is not None and element.isStatus() is True:
+                        result.add(element.getKey())
+                    tempIndex += 1
+        return result
+
+    def getSortedValues(self):
+        # The method returns a list with all the values
+        result = SortedArrayList(self.valueComparator)
+        for lists in self.buckets:
+            if lists is not None:
+                tempIndex = 0
+                while tempIndex < lists.size():
+                    element = lists.get(tempIndex)
+                    if element is not None and element.isStatus() is True:
+                        result.add(element.getValue())
+                    tempIndex += 1
+        return result
+
 
 def main():
     t = HashTableSC(2)
@@ -153,15 +183,18 @@ def main():
 
 
 def thousandCases():
-    testing = HashTableSC()
-    letters = ["A", "B", "C", "D", "F", "G", "H", "I"]
+    testing = HashTableSC(10,StringComparator(), NumberComparator())
+    letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+               "V", "W", "X", "Y", "Z"]
     for num in range(999):
         temp = ""
-        for numbers in range(3):
+        for numbers in range(26):
             temp += letters[random.randint(0, len(letters) - 1)]
         testing.put(temp, num)
-    allvalues = testing.getValues()
-    print(allvalues.size())
+    allValues = testing.getSortedKeys()
+    print(allValues.size())
+    allValues.printValues()
+    allValues.printValues()
     testing.makeEmpty()
 
 
