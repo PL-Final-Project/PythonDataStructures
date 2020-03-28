@@ -1,0 +1,101 @@
+Stack Names => Stack() <
+"Francisco"
+"Jorge"
+"Alberto"
+"Andrew"
+>
+
+print => Names
+
+[
+    Andrew, -> Top
+    Alberto,
+    Jorge,
+    Francisco
+]
+
+Queue Names => Stack() <
+"Francisco"
+"Jorge"
+"Alberto"
+"Andrew"
+>
+print => Names
+
+[
+    Andrew, -> Back
+    Alberto,
+    Jorge,
+    Francisco - Front
+]
+
+
+HashTableOA Names => HashTableOA() <
+"Francisco, 1"
+"Jorge, 2"
+"Alberto, 3"
+"Andrew, 4"
+>
+
+print => Names
+[               [
+    Francisco       1
+    Jorge           2
+    Alberto         3
+    Andrew          4
+]               ]
+
+Names.remove(Francisco)
+
+print => Names
+[               [      
+    Jorge           2
+    Alberto         3
+    Andrew          4
+]               ]
+
+ArrayList Names => ArrayList() <
+"Francisco"
+"Jorge"
+"Alberto"
+"Andrew"
+>
+Use ArrayList<
+    => Method Name? max
+    => Parameters? (NONE is default)
+    => Implementation
+    :   max = None
+        for element in self.elements:
+            if max is None:
+                max = element
+            elif element > max:
+                max = element
+        return max
+    >
+
+Reserved Words:
+    <Structures>, <Comparators> ,Use, print, None, 
+
+Structures:
+    <InputRequiredStruct>,<InputOptionalStruct>, Stack, Queue, Map, SLinkedList, ArrayList, CDLinkedList,Stack, Set, Bag,
+
+Parenthesis
+    \< | \>
+
+Assign
+    "=>"
+
+Comparators:
+    StringComp, NumberComp
+
+InputRequiredStruct:
+    Tree
+InputOptionalStruct:
+    HashTableOA, HashTableSC, SArrayList
+Declare:(PARSER)
+    <InputRequiredStruct> <ID> <Assign> \< (<Whitspace>*<Comparators>+<Whitspace>*)+ \>
+    <InputOptionalStruct> <ID> <Assign> \< (<Whitspace>*<Comparators>+<Whitspace>*)+ \>
+    <Structures> <ID> <Assign> \< <Whitspace>* \>
+
+Add Mehtods:
+    Use Interface <Structures> : 

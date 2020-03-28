@@ -2,6 +2,7 @@ from .BinaryTreeNode import BinaryTreeNode
 from .KeyValuePair import KeyValuePair
 from ALBERTO.PythonDS.MapInterface import MapInterface
 from ANDREW.LinkedList.SinglyLinkedList import SinglyLinkedList
+from ALBERTO.PythonDS.Sorted.Comparator import Comparator
 
 
 class BinarySearchTree(MapInterface):
@@ -23,7 +24,7 @@ class BinarySearchTree(MapInterface):
         def setValue(self, value):
             self.value = value
 
-    def __init__(self, keyComparator):
+    def __init__(self, keyComparator: Comparator):
         self.root = BinaryTreeNode
         self.root = None
         self.currentSize = 0
