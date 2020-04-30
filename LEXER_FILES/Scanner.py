@@ -2,11 +2,11 @@
 from ply import lex
 from ply import yacc
 
-#Reserved keywords for the tokens.
+#Reserved keywords for the tokens.  
 reserved = {
 'ArrayStack': 'AS','SinglyLinkedList': 'SLL','CircularDoublyLinkedList': 'CDLL','ArrayList': 'AL',
 'Map': 'Map','HashTableSC': 'HSSC', 'HashTableOA': 'HSOA','DoublyLinkedQueue': 'DLQ','print': 'print','use': 'use','None': 'None',
-'StringComp': 'StringComp', 'NumberComp': 'NumberComp'
+'StringComp': 'StringComp', 'NumberComp': 'NumberComp', 'BinarySearchTree': 'Tree', 'SortedArrayList': 'SArrayList'
 }
 
 #Tokens
@@ -52,5 +52,5 @@ lex.input(data)
 while True:
     tok = lex.token()
     if not tok: 
-        break      # No more input
+        break      # No more input 
     print(tok)

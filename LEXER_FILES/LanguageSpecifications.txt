@@ -1,9 +1,4 @@
-Stack Names => Stack() <
-"Francisco"
-"Jorge"
-"Alberto"
-"Andrew"
->
+Stack Names => Stack() <>
 
 print => Names
 
@@ -28,7 +23,7 @@ print => Names
     Jorge,
     Francisco - Front
 ]
-
+C
 
 HashTableOA Names => HashTableOA() <
 "Francisco, 1"
@@ -107,9 +102,10 @@ Declare:
     <InputOptionalStruct> <ID> <Assign> \< (<Whitspace>*<Comparators>+<Whitspace>*)+ \>
     <Structures> <ID> <Assign> \< <Whitspace>* \>
 
-Add Mehtods:
+Add Methods:
     Use <Structures> <
         <ID> :
         ([A-Za-z]+,?)*
 
      >
+
