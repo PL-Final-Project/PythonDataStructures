@@ -3,11 +3,10 @@ import random
 
 from MapInterface import MapInterface
 from MapEntry import MapEntry
-from SinglyLinkedList import SinglyLinkedList
-from Sorted.Comparator import Comparator
-from Sorted.StringComparator import StringComparator
-from Sorted.NumberComparator import NumberComparator
-from Sorted.SortedArrayList import SortedArrayList
+from PythonDS.Sorted.Comparator import Comparator
+from PythonDS.Sorted.StringComparator import StringComparator
+from PythonDS.Sorted.NumberComparator import NumberComparator
+from PythonDS.Sorted.SortedArrayList import SortedArrayList
 
 
 class HashTableOA(MapInterface):

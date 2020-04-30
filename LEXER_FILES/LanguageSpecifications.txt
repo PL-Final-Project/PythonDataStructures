@@ -1,9 +1,4 @@
-Stack Names => Stack() <
-"Francisco"
-"Jorge"
-"Alberto"
-"Andrew"
->
+Stack Names => Stack() <>
 
 print => Names
 
@@ -28,7 +23,7 @@ print => Names
     Jorge,
     Francisco - Front
 ]
-
+C
 
 HashTableOA Names => HashTableOA() <
 "Francisco, 1"
@@ -73,6 +68,11 @@ Use ArrayList<
         return max
     >
 
+----------------- LEXER -----------------------------------------------------------------------------------------------
+
+String: 
+    \" <Character>* \"
+
 Reserved Words:
     <Structures>, <Comparators> ,Use, print, None, 
 
@@ -90,12 +90,22 @@ Comparators:
 
 InputRequiredStruct:
     Tree
+    
 InputOptionalStruct:
     HashTableOA, HashTableSC, SArrayList
-Declare:(PARSER)
+
+
+----------------- PARSER -----------------------------------------------------------------------------------------------
+
+Declare:
     <InputRequiredStruct> <ID> <Assign> \< (<Whitspace>*<Comparators>+<Whitspace>*)+ \>
     <InputOptionalStruct> <ID> <Assign> \< (<Whitspace>*<Comparators>+<Whitspace>*)+ \>
     <Structures> <ID> <Assign> \< <Whitspace>* \>
 
-Add Mehtods:
-    Use Interface <Structures> : 
+Add Methods:
+    Use <Structures> <
+        <ID> :
+        ([A-Za-z]+,?)*
+
+     >
+
