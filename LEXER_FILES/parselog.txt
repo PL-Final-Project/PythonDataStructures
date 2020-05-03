@@ -1,0 +1,1542 @@
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSSC,'HashTableSC',3,0)
+   yacc.py: 445:Action : Shift and goto state 7
+   yacc.py: 410:
+   yacc.py: 411:State  : 7
+   yacc.py: 435:Stack  : HSSC . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSSC character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 23
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 23
+   yacc.py: 435:Stack  : HSSC Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 40
+   yacc.py: 410:
+   yacc.py: 411:State  : 40
+   yacc.py: 435:Stack  : HSSC Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 50
+   yacc.py: 410:
+   yacc.py: 411:State  : 50
+   yacc.py: 435:Stack  : HSSC Id Assign LP . LexToken(StringComp,'StringComp',3,18)
+   yacc.py: 445:Action : Shift and goto state 59
+   yacc.py: 410:
+   yacc.py: 411:State  : 59
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp . LexToken(RP,')',3,28)
+   yacc.py: 445:Action : Shift and goto state 69
+   yacc.py: 410:
+   yacc.py: 411:State  : 69
+   yacc.py: 430:Defaulted state 69: Reduce using 26
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSSC Id Assign LP StringComp RP] with ['HashTableSC',None,'=>','(','StringComp',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,29)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,30)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(GT,'>',3,31)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(GT,'>',3,31)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,31)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSSC,'HashTableSC',3,0)
+   yacc.py: 445:Action : Shift and goto state 7
+   yacc.py: 410:
+   yacc.py: 411:State  : 7
+   yacc.py: 435:Stack  : HSSC . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSSC character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 23
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 23
+   yacc.py: 435:Stack  : HSSC Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 40
+   yacc.py: 410:
+   yacc.py: 411:State  : 40
+   yacc.py: 435:Stack  : HSSC Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 50
+   yacc.py: 410:
+   yacc.py: 411:State  : 50
+   yacc.py: 435:Stack  : HSSC Id Assign LP . LexToken(StringComp,'StringComp',3,18)
+   yacc.py: 445:Action : Shift and goto state 59
+   yacc.py: 410:
+   yacc.py: 411:State  : 59
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp . LexToken(RP,')',3,28)
+   yacc.py: 445:Action : Shift and goto state 69
+   yacc.py: 410:
+   yacc.py: 411:State  : 69
+   yacc.py: 430:Defaulted state 69: Reduce using 26
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSSC Id Assign LP StringComp RP] with ['HashTableSC',None,'=>','(','StringComp',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,29)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,30)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(Separator,',',3,31)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator . LexToken(Comillas,'"',3,32)
+   yacc.py: 445:Action : Shift and goto state 34
+   yacc.py: 410:
+   yacc.py: 411:State  : 34
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas . LexToken(character,'A',3,33)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas character . LexToken(character,'l',3,34)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(character,'l',3,34)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id character . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'l'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 46
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 46
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements . LexToken(Comillas,'"',3,35)
+   yacc.py: 445:Action : Shift and goto state 54
+   yacc.py: 410:
+   yacc.py: 411:State  : 54
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements Comillas . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [String -> Comillas Elements Comillas] with ['"',None,'"'] and goto state 30
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 30
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator String . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> String] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator . LexToken(character,'T',3,37)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator character . LexToken(character,'R',3,38)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['T'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Id . LexToken(character,'R',3,38)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Id character . LexToken(character,'e',3,39)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'R'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Id . LexToken(character,'e',3,39)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Id character . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'e'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Id . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,40)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSSC,'HashTableSC',3,0)
+   yacc.py: 445:Action : Shift and goto state 7
+   yacc.py: 410:
+   yacc.py: 411:State  : 7
+   yacc.py: 435:Stack  : HSSC . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSSC character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 23
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 23
+   yacc.py: 435:Stack  : HSSC Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 40
+   yacc.py: 410:
+   yacc.py: 411:State  : 40
+   yacc.py: 435:Stack  : HSSC Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 50
+   yacc.py: 410:
+   yacc.py: 411:State  : 50
+   yacc.py: 435:Stack  : HSSC Id Assign LP . LexToken(StringComp,'StringComp',3,18)
+   yacc.py: 445:Action : Shift and goto state 59
+   yacc.py: 410:
+   yacc.py: 411:State  : 59
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp . LexToken(RP,')',3,28)
+   yacc.py: 445:Action : Shift and goto state 69
+   yacc.py: 410:
+   yacc.py: 411:State  : 69
+   yacc.py: 430:Defaulted state 69: Reduce using 26
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSSC Id Assign LP StringComp RP] with ['HashTableSC',None,'=>','(','StringComp',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,29)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,30)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(Separator,',',3,31)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator . LexToken(Comillas,'"',3,32)
+   yacc.py: 445:Action : Shift and goto state 34
+   yacc.py: 410:
+   yacc.py: 411:State  : 34
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas . LexToken(character,'A',3,33)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas character . LexToken(character,'l',3,34)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(character,'l',3,34)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id character . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'l'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 46
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 46
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements . LexToken(Comillas,'"',3,35)
+   yacc.py: 445:Action : Shift and goto state 54
+   yacc.py: 410:
+   yacc.py: 411:State  : 54
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements Comillas . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [String -> Comillas Elements Comillas] with ['"',None,'"'] and goto state 30
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 30
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator String . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> String] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator . LexToken(True,'True',3,37)
+   yacc.py: 445:Action : Shift and goto state 31
+   yacc.py: 410:
+   yacc.py: 411:State  : 31
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator True . LexToken(GT,'>',3,41)
+   yacc.py: 471:Action : Reduce rule [Bool -> True] with ['True'] and goto state 27
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 27
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Bool . LexToken(GT,'>',3,41)
+   yacc.py: 471:Action : Reduce rule [Elements -> Bool] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,41)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(GT,'>',3,41)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,41)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSSC,'HashTableSC',3,0)
+   yacc.py: 445:Action : Shift and goto state 7
+   yacc.py: 410:
+   yacc.py: 411:State  : 7
+   yacc.py: 435:Stack  : HSSC . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSSC character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 23
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 23
+   yacc.py: 435:Stack  : HSSC Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 40
+   yacc.py: 410:
+   yacc.py: 411:State  : 40
+   yacc.py: 435:Stack  : HSSC Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 50
+   yacc.py: 410:
+   yacc.py: 411:State  : 50
+   yacc.py: 435:Stack  : HSSC Id Assign LP . LexToken(StringComp,'StringComp',3,18)
+   yacc.py: 445:Action : Shift and goto state 59
+   yacc.py: 410:
+   yacc.py: 411:State  : 59
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp . LexToken(RP,')',3,28)
+   yacc.py: 445:Action : Shift and goto state 69
+   yacc.py: 410:
+   yacc.py: 411:State  : 69
+   yacc.py: 430:Defaulted state 69: Reduce using 26
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSSC Id Assign LP StringComp RP] with ['HashTableSC',None,'=>','(','StringComp',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,29)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,30)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(Separator,',',3,31)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator . LexToken(Comillas,'"',3,32)
+   yacc.py: 445:Action : Shift and goto state 34
+   yacc.py: 410:
+   yacc.py: 411:State  : 34
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas . LexToken(character,'A',3,33)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas character . LexToken(character,'l',3,34)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(character,'l',3,34)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id character . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'l'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 46
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 46
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements . LexToken(Comillas,'"',3,35)
+   yacc.py: 445:Action : Shift and goto state 54
+   yacc.py: 410:
+   yacc.py: 411:State  : 54
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements Comillas . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [String -> Comillas Elements Comillas] with ['"',None,'"'] and goto state 30
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 30
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator String . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> String] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator . LexToken(GT,'>',3,40)
+   yacc.py: 474:Action : Reduce rule [Elements -> <empty>] with [] and goto state 53
+   yacc.py: 548:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(GT,'>',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,40)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSSC,'HashTableSC',3,0)
+   yacc.py: 445:Action : Shift and goto state 7
+   yacc.py: 410:
+   yacc.py: 411:State  : 7
+   yacc.py: 435:Stack  : HSSC . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSSC character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 23
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 23
+   yacc.py: 435:Stack  : HSSC Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 40
+   yacc.py: 410:
+   yacc.py: 411:State  : 40
+   yacc.py: 435:Stack  : HSSC Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 50
+   yacc.py: 410:
+   yacc.py: 411:State  : 50
+   yacc.py: 435:Stack  : HSSC Id Assign LP . LexToken(StringComp,'StringComp',3,18)
+   yacc.py: 445:Action : Shift and goto state 59
+   yacc.py: 410:
+   yacc.py: 411:State  : 59
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp . LexToken(RP,')',3,28)
+   yacc.py: 445:Action : Shift and goto state 69
+   yacc.py: 410:
+   yacc.py: 411:State  : 69
+   yacc.py: 430:Defaulted state 69: Reduce using 26
+   yacc.py: 435:Stack  : HSSC Id Assign LP StringComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSSC Id Assign LP StringComp RP] with ['HashTableSC',None,'=>','(','StringComp',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,29)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,30)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(Separator,',',3,31)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(Separator,',',3,31)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator . LexToken(Comillas,'"',3,32)
+   yacc.py: 445:Action : Shift and goto state 34
+   yacc.py: 410:
+   yacc.py: 411:State  : 34
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas . LexToken(character,'A',3,33)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas character . LexToken(character,'l',3,34)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(character,'l',3,34)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id character . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'l'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(Comillas,'"',3,35)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 46
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 46
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements . LexToken(Comillas,'"',3,35)
+   yacc.py: 445:Action : Shift and goto state 54
+   yacc.py: 410:
+   yacc.py: 411:State  : 54
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements Comillas . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [String -> Comillas Elements Comillas] with ['"',None,'"'] and goto state 30
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 30
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator String . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> String] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator . LexToken(GT,'>',3,37)
+   yacc.py: 474:Action : Reduce rule [Elements -> <empty>] with [] and goto state 53
+   yacc.py: 548:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,37)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(GT,'>',3,37)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,37)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(HSOA,'HashTableOA',3,0)
+   yacc.py: 445:Action : Shift and goto state 6
+   yacc.py: 410:
+   yacc.py: 411:State  : 6
+   yacc.py: 435:Stack  : HSOA . LexToken(character,'A',3,12)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : HSOA character . LexToken(Assign,'=>',3,14)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 22
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 22
+   yacc.py: 435:Stack  : HSOA Id . LexToken(Assign,'=>',3,14)
+   yacc.py: 445:Action : Shift and goto state 39
+   yacc.py: 410:
+   yacc.py: 411:State  : 39
+   yacc.py: 435:Stack  : HSOA Id Assign . LexToken(LP,'(',3,17)
+   yacc.py: 445:Action : Shift and goto state 49
+   yacc.py: 410:
+   yacc.py: 411:State  : 49
+   yacc.py: 435:Stack  : HSOA Id Assign LP . LexToken(RP,')',3,18)
+   yacc.py: 445:Action : Shift and goto state 57
+   yacc.py: 410:
+   yacc.py: 411:State  : 57
+   yacc.py: 430:Defaulted state 57: Reduce using 29
+   yacc.py: 435:Stack  : HSOA Id Assign LP RP . None
+   yacc.py: 471:Action : Reduce rule [InputOptionalStruct -> HSOA Id Assign LP RP] with ['HashTableOA',None,'=>','(',')'] and goto state 3
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 3
+   yacc.py: 435:Stack  : InputOptionalStruct . LexToken(LT,'<',3,19)
+   yacc.py: 445:Action : Shift and goto state 18
+   yacc.py: 410:
+   yacc.py: 411:State  : 18
+   yacc.py: 435:Stack  : InputOptionalStruct LT . LexToken(digit,'3',3,20)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputOptionalStruct LT digit . LexToken(Separator,',',3,21)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputOptionalStruct LT Int . LexToken(Separator,',',3,21)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(Separator,',',3,21)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator . LexToken(Comillas,'"',3,22)
+   yacc.py: 445:Action : Shift and goto state 34
+   yacc.py: 410:
+   yacc.py: 411:State  : 34
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas . LexToken(character,'A',3,23)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas character . LexToken(character,'l',3,24)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(character,'l',3,24)
+   yacc.py: 445:Action : Shift and goto state 38
+   yacc.py: 410:
+   yacc.py: 411:State  : 38
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id character . LexToken(Comillas,'"',3,25)
+   yacc.py: 471:Action : Reduce rule [Id -> Id character] with [None,'l'] and goto state 29
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 29
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Id . LexToken(Comillas,'"',3,25)
+   yacc.py: 471:Action : Reduce rule [Elements -> Id] with [None] and goto state 46
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 46
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements . LexToken(Comillas,'"',3,25)
+   yacc.py: 445:Action : Shift and goto state 54
+   yacc.py: 410:
+   yacc.py: 411:State  : 54
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Comillas Elements Comillas . LexToken(Separator,',',3,26)
+   yacc.py: 471:Action : Reduce rule [String -> Comillas Elements Comillas] with ['"',None,'"'] and goto state 30
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 30
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator String . LexToken(Separator,',',3,26)
+   yacc.py: 471:Action : Reduce rule [Elements -> String] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(Separator,',',3,26)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator . LexToken(GT,'>',3,27)
+   yacc.py: 474:Action : Reduce rule [Elements -> <empty>] with [] and goto state 53
+   yacc.py: 548:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,27)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements Separator Elements . LexToken(GT,'>',3,27)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 26
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 26
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements . LexToken(GT,'>',3,27)
+   yacc.py: 445:Action : Shift and goto state 43
+   yacc.py: 410:
+   yacc.py: 411:State  : 43
+   yacc.py: 435:Stack  : InputOptionalStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputOptionalStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(Tree,'BinarySearchTree',3,0)
+   yacc.py: 445:Action : Shift and goto state 8
+   yacc.py: 410:
+   yacc.py: 411:State  : 8
+   yacc.py: 435:Stack  : Tree . LexToken(character,'A',3,17)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : Tree character . LexToken(Assign,'=>',3,19)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 24
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 24
+   yacc.py: 435:Stack  : Tree Id . LexToken(Assign,'=>',3,19)
+   yacc.py: 445:Action : Shift and goto state 41
+   yacc.py: 410:
+   yacc.py: 411:State  : 41
+   yacc.py: 435:Stack  : Tree Id Assign . LexToken(LP,'(',3,22)
+   yacc.py: 445:Action : Shift and goto state 51
+   yacc.py: 410:
+   yacc.py: 411:State  : 51
+   yacc.py: 435:Stack  : Tree Id Assign LP . LexToken(RP,')',3,23)
+   yacc.py: 580:Error  : Tree Id Assign LP . LexToken(RP,')',3,23)
+   yacc.py: 410:
+   yacc.py: 411:State  : 51
+   yacc.py: 435:Stack  : Tree Id Assign LP . error
+   yacc.py: 580:Error  : Tree Id Assign LP . error
+   yacc.py: 410:
+   yacc.py: 411:State  : 41
+   yacc.py: 435:Stack  : Tree Id Assign . error
+   yacc.py: 580:Error  : Tree Id Assign . error
+   yacc.py: 410:
+   yacc.py: 411:State  : 24
+   yacc.py: 435:Stack  : Tree Id . error
+   yacc.py: 580:Error  : Tree Id . error
+   yacc.py: 410:
+   yacc.py: 411:State  : 8
+   yacc.py: 435:Stack  : Tree . error
+   yacc.py: 580:Error  : Tree . error
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . error
+   yacc.py: 580:Error  : . error
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(LT,'<',3,25)
+   yacc.py: 580:Error  : . LexToken(LT,'<',3,25)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'3',3,26)
+   yacc.py: 580:Error  : . LexToken(digit,'3',3,26)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(Separator,',',3,27)
+   yacc.py: 580:Error  : . LexToken(Separator,',',3,27)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'4',3,28)
+   yacc.py: 580:Error  : . LexToken(digit,'4',3,28)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'5',3,29)
+   yacc.py: 580:Error  : . LexToken(digit,'5',3,29)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(Separator,',',3,30)
+   yacc.py: 580:Error  : . LexToken(Separator,',',3,30)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'6',3,31)
+   yacc.py: 580:Error  : . LexToken(digit,'6',3,31)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'4',3,32)
+   yacc.py: 580:Error  : . LexToken(digit,'4',3,32)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'3',3,33)
+   yacc.py: 580:Error  : . LexToken(digit,'3',3,33)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'4',3,34)
+   yacc.py: 580:Error  : . LexToken(digit,'4',3,34)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(Separator,',',3,35)
+   yacc.py: 580:Error  : . LexToken(Separator,',',3,35)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'6',3,36)
+   yacc.py: 580:Error  : . LexToken(digit,'6',3,36)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'5',3,37)
+   yacc.py: 580:Error  : . LexToken(digit,'5',3,37)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(digit,'6',3,38)
+   yacc.py: 580:Error  : . LexToken(digit,'6',3,38)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(GT,'>',3,39)
+   yacc.py: 580:Error  : . LexToken(GT,'>',3,39)
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . $end
+   yacc.py: 474:Action : Reduce rule [Program -> <empty>] with [] and goto state 1
+   yacc.py: 548:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(Tree,'BinarySearchTree',3,0)
+   yacc.py: 445:Action : Shift and goto state 8
+   yacc.py: 410:
+   yacc.py: 411:State  : 8
+   yacc.py: 435:Stack  : Tree . LexToken(character,'A',3,17)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : Tree character . LexToken(Assign,'=>',3,19)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 24
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 24
+   yacc.py: 435:Stack  : Tree Id . LexToken(Assign,'=>',3,19)
+   yacc.py: 445:Action : Shift and goto state 41
+   yacc.py: 410:
+   yacc.py: 411:State  : 41
+   yacc.py: 435:Stack  : Tree Id Assign . LexToken(LP,'(',3,22)
+   yacc.py: 445:Action : Shift and goto state 51
+   yacc.py: 410:
+   yacc.py: 411:State  : 51
+   yacc.py: 435:Stack  : Tree Id Assign LP . LexToken(NumberComp,'NumberComp',3,23)
+   yacc.py: 445:Action : Shift and goto state 63
+   yacc.py: 410:
+   yacc.py: 411:State  : 63
+   yacc.py: 435:Stack  : Tree Id Assign LP NumberComp . LexToken(RP,')',3,33)
+   yacc.py: 445:Action : Shift and goto state 72
+   yacc.py: 410:
+   yacc.py: 411:State  : 72
+   yacc.py: 430:Defaulted state 72: Reduce using 21
+   yacc.py: 435:Stack  : Tree Id Assign LP NumberComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputRequiredStruct -> Tree Id Assign LP NumberComp RP] with [<str @ 0x2fb1530>,None,'=>','(','NumberComp',')'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 4
+   yacc.py: 435:Stack  : InputRequiredStruct . LexToken(LT,'<',3,35)
+   yacc.py: 445:Action : Shift and goto state 19
+   yacc.py: 410:
+   yacc.py: 411:State  : 19
+   yacc.py: 435:Stack  : InputRequiredStruct LT . LexToken(digit,'3',3,36)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT digit . LexToken(Separator,',',3,37)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Int . LexToken(Separator,',',3,37)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(Separator,',',3,37)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator . LexToken(digit,'4',3,38)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit . LexToken(digit,'5',3,39)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit digit . LexToken(Separator,',',3,40)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['5'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit Int . LexToken(Separator,',',3,40)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Int . LexToken(Separator,',',3,40)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(Separator,',',3,40)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator . LexToken(digit,'6',3,41)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit . LexToken(digit,'4',3,42)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit . LexToken(digit,'3',3,43)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit . LexToken(digit,'4',3,44)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit digit . LexToken(Separator,',',3,45)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['4'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit Int . LexToken(Separator,',',3,45)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['3',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit Int . LexToken(Separator,',',3,45)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit Int . LexToken(Separator,',',3,45)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Int . LexToken(Separator,',',3,45)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(Separator,',',3,45)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator . LexToken(digit,'6',3,46)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit . LexToken(digit,'5',3,47)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit . LexToken(digit,'6',3,48)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit digit . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['6'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit Int . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['5',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit Int . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Int . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Elements . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(GT,'>',3,49)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(GT,'>',3,49)
+   yacc.py: 445:Action : Shift and goto state 47
+   yacc.py: 410:
+   yacc.py: 411:State  : 47
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputRequiredStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(SArrayList,'SortedArrayList',3,0)
+   yacc.py: 445:Action : Shift and goto state 9
+   yacc.py: 410:
+   yacc.py: 411:State  : 9
+   yacc.py: 435:Stack  : SArrayList . LexToken(character,'A',3,16)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : SArrayList character . LexToken(Assign,'=>',3,18)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 25
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 25
+   yacc.py: 435:Stack  : SArrayList Id . LexToken(Assign,'=>',3,18)
+   yacc.py: 445:Action : Shift and goto state 42
+   yacc.py: 410:
+   yacc.py: 411:State  : 42
+   yacc.py: 435:Stack  : SArrayList Id Assign . LexToken(LP,'(',3,21)
+   yacc.py: 445:Action : Shift and goto state 52
+   yacc.py: 410:
+   yacc.py: 411:State  : 52
+   yacc.py: 435:Stack  : SArrayList Id Assign LP . LexToken(NumberComp,'NumberComp',3,22)
+   yacc.py: 445:Action : Shift and goto state 65
+   yacc.py: 410:
+   yacc.py: 411:State  : 65
+   yacc.py: 435:Stack  : SArrayList Id Assign LP NumberComp . LexToken(RP,')',3,32)
+   yacc.py: 445:Action : Shift and goto state 74
+   yacc.py: 410:
+   yacc.py: 411:State  : 74
+   yacc.py: 430:Defaulted state 74: Reduce using 23
+   yacc.py: 435:Stack  : SArrayList Id Assign LP NumberComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputRequiredStruct -> SArrayList Id Assign LP NumberComp RP] with [<str @ 0x2fa7bd8>,None,'=>','(','NumberComp',')'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 4
+   yacc.py: 435:Stack  : InputRequiredStruct . LexToken(LT,'<',3,34)
+   yacc.py: 445:Action : Shift and goto state 19
+   yacc.py: 410:
+   yacc.py: 411:State  : 19
+   yacc.py: 435:Stack  : InputRequiredStruct LT . LexToken(digit,'3',3,35)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT digit . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Int . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator . LexToken(digit,'4',3,37)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit . LexToken(digit,'5',3,38)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit digit . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['5'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit Int . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Int . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(Separator,',',3,39)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator . LexToken(digit,'6',3,40)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit . LexToken(digit,'4',3,41)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit . LexToken(digit,'3',3,42)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit . LexToken(digit,'4',3,43)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit digit . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['4'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['3',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(Separator,',',3,44)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator . LexToken(digit,'6',3,45)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit . LexToken(digit,'5',3,46)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit . LexToken(digit,'6',3,47)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit digit . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['6'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['5',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(GT,'>',3,48)
+   yacc.py: 445:Action : Shift and goto state 47
+   yacc.py: 410:
+   yacc.py: 411:State  : 47
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputRequiredStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration] with [None] and goto state 1
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 1
+   yacc.py: 435:Stack  : Program . $end
+   yacc.py: 571:Done   : Returning <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 572:PLY: PARSE DEBUG END
+   yacc.py: 362:PLY: PARSE DEBUG START
+   yacc.py: 410:
+   yacc.py: 411:State  : 0
+   yacc.py: 435:Stack  : . LexToken(SArrayList,'SortedArrayList',3,0)
+   yacc.py: 445:Action : Shift and goto state 9
+   yacc.py: 410:
+   yacc.py: 411:State  : 9
+   yacc.py: 435:Stack  : SArrayList . LexToken(character,'A',3,16)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : SArrayList character . LexToken(Assign,'=>',3,18)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['A'] and goto state 25
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 25
+   yacc.py: 435:Stack  : SArrayList Id . LexToken(Assign,'=>',3,18)
+   yacc.py: 445:Action : Shift and goto state 42
+   yacc.py: 410:
+   yacc.py: 411:State  : 42
+   yacc.py: 435:Stack  : SArrayList Id Assign . LexToken(LP,'(',3,21)
+   yacc.py: 445:Action : Shift and goto state 52
+   yacc.py: 410:
+   yacc.py: 411:State  : 52
+   yacc.py: 435:Stack  : SArrayList Id Assign LP . LexToken(NumberComp,'NumberComp',3,22)
+   yacc.py: 445:Action : Shift and goto state 65
+   yacc.py: 410:
+   yacc.py: 411:State  : 65
+   yacc.py: 435:Stack  : SArrayList Id Assign LP NumberComp . LexToken(RP,')',3,32)
+   yacc.py: 445:Action : Shift and goto state 74
+   yacc.py: 410:
+   yacc.py: 411:State  : 74
+   yacc.py: 430:Defaulted state 74: Reduce using 23
+   yacc.py: 435:Stack  : SArrayList Id Assign LP NumberComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputRequiredStruct -> SArrayList Id Assign LP NumberComp RP] with [<str @ 0x2fa7bd8>,None,'=>','(','NumberComp',')'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 4
+   yacc.py: 435:Stack  : InputRequiredStruct . LexToken(LT,'<',3,34)
+   yacc.py: 445:Action : Shift and goto state 19
+   yacc.py: 410:
+   yacc.py: 411:State  : 19
+   yacc.py: 435:Stack  : InputRequiredStruct LT . LexToken(digit,'3',3,35)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT digit . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['3'] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Int . LexToken(Separator,',',3,36)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(Separator,',',3,36)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator . LexToken(digit,'4',3,37)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit . LexToken(digit,'5',3,38)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit digit . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['5'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator digit Int . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Int . LexToken(Separator,',',3,39)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(Separator,',',3,39)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator . LexToken(digit,'6',3,40)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit . LexToken(digit,'4',3,41)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit . LexToken(digit,'3',3,42)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit . LexToken(digit,'4',3,43)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit digit . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['4'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['3',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['4',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator digit Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Int . LexToken(Separator,',',3,44)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(Separator,',',3,44)
+   yacc.py: 445:Action : Shift and goto state 44
+   yacc.py: 410:
+   yacc.py: 411:State  : 44
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator . LexToken(digit,'6',3,45)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit . LexToken(digit,'5',3,46)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit . LexToken(digit,'6',3,47)
+   yacc.py: 445:Action : Shift and goto state 33
+   yacc.py: 410:
+   yacc.py: 411:State  : 33
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit digit . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit] with ['6'] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit digit Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['5',None] and goto state 45
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 45
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator digit Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Int -> digit Int] with ['6',None] and goto state 28
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 28
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Int . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Int] with [None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 53
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 53
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements Separator Elements . LexToken(GT,'>',3,48)
+   yacc.py: 471:Action : Reduce rule [Elements -> Elements Separator Elements] with [None,',',None] and goto state 35
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements . LexToken(GT,'>',3,48)
+   yacc.py: 445:Action : Shift and goto state 47
+   yacc.py: 410:
+   yacc.py: 411:State  : 47
+   yacc.py: 435:Stack  : InputRequiredStruct LT Elements GT . LexToken(Tree,'BinarySearchTree',3,50)
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputRequiredStruct LT Elements GT] with [None,'<',None,'>'] and goto state 2
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 2
+   yacc.py: 435:Stack  : Declaration . LexToken(Tree,'BinarySearchTree',3,50)
+   yacc.py: 445:Action : Shift and goto state 8
+   yacc.py: 410:
+   yacc.py: 411:State  : 8
+   yacc.py: 435:Stack  : Declaration Tree . LexToken(character,'T',3,67)
+   yacc.py: 445:Action : Shift and goto state 21
+   yacc.py: 410:
+   yacc.py: 411:State  : 21
+   yacc.py: 435:Stack  : Declaration Tree character . LexToken(Assign,'=>',3,69)
+   yacc.py: 471:Action : Reduce rule [Id -> character] with ['T'] and goto state 24
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 24
+   yacc.py: 435:Stack  : Declaration Tree Id . LexToken(Assign,'=>',3,69)
+   yacc.py: 445:Action : Shift and goto state 41
+   yacc.py: 410:
+   yacc.py: 411:State  : 41
+   yacc.py: 435:Stack  : Declaration Tree Id Assign . LexToken(LP,'(',3,72)
+   yacc.py: 445:Action : Shift and goto state 51
+   yacc.py: 410:
+   yacc.py: 411:State  : 51
+   yacc.py: 435:Stack  : Declaration Tree Id Assign LP . LexToken(NumberComp,'NumberComp',3,73)
+   yacc.py: 445:Action : Shift and goto state 63
+   yacc.py: 410:
+   yacc.py: 411:State  : 63
+   yacc.py: 435:Stack  : Declaration Tree Id Assign LP NumberComp . LexToken(RP,')',3,83)
+   yacc.py: 445:Action : Shift and goto state 72
+   yacc.py: 410:
+   yacc.py: 411:State  : 72
+   yacc.py: 430:Defaulted state 72: Reduce using 21
+   yacc.py: 435:Stack  : Declaration Tree Id Assign LP NumberComp RP . None
+   yacc.py: 471:Action : Reduce rule [InputRequiredStruct -> Tree Id Assign LP NumberComp RP] with [<str @ 0x2fb1530>,None,'=>','(','NumberComp',')'] and goto state 4
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 4
+   yacc.py: 435:Stack  : Declaration InputRequiredStruct . LexToken(LT,'<',3,85)
+   yacc.py: 445:Action : Shift and goto state 19
+   yacc.py: 410:
+   yacc.py: 411:State  : 19
+   yacc.py: 435:Stack  : Declaration InputRequiredStruct LT . LexToken(GT,'>',3,86)
+   yacc.py: 474:Action : Reduce rule [Elements -> <empty>] with [] and goto state 35
+   yacc.py: 548:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 35
+   yacc.py: 435:Stack  : Declaration InputRequiredStruct LT Elements . LexToken(GT,'>',3,86)
+   yacc.py: 445:Action : Shift and goto state 47
+   yacc.py: 410:
+   yacc.py: 411:State  : 47
+   yacc.py: 435:Stack  : Declaration InputRequiredStruct LT Elements GT . $end
+   yacc.py: 471:Action : Reduce rule [Declaration -> InputRequiredStruct LT Elements GT] with [None,'<',None,'>'] and goto state 17
+   yacc.py: 506:Result : <NoneType @ 0x5341cfcc> (None)
+   yacc.py: 410:
+   yacc.py: 411:State  : 17
+   yacc.py: 430:Defaulted state 17: Reduce using 1
+   yacc.py: 435:Stack  : Declaration Declaration . $end
+   yacc.py: 471:Action : Reduce rule [Program -> Declaration Declaration] with [None,None] and goto state 1

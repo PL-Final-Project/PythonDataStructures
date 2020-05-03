@@ -1,0 +1,1282 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    None
+    SLL
+
+Grammar
+
+Rule 0     S' -> Program
+Rule 1     Program -> Declaration
+Rule 2     Program -> Program Separator Declaration
+Rule 3     Program -> Program Separator Action
+Rule 4     Action -> use Id add Prim
+Rule 5     Action -> use Id add Tuples
+Rule 6     Action -> print Id
+Rule 7     Declaration -> InputOptionalStruct LT Elements GT
+Rule 8     Declaration -> InputRequiredStruct LT Elements GT
+Rule 9     Declaration -> Structures Id Assign LT Elements GT
+Rule 10    Declaration -> InputOptionalStruct LT GT
+Rule 11    Declaration -> InputRequiredStruct LT GT
+Rule 12    Declaration -> Structures Id Assign LT GT
+Rule 13    Tuples -> LP Prim Separator Prim RP
+Rule 14    Elements -> Prim
+Rule 15    Elements -> Elements Separator Elements
+Rule 16    Elements -> Tuples
+Rule 17    Prim -> Bool
+Rule 18    Prim -> Int
+Rule 19    Prim -> Id
+Rule 20    Prim -> String
+Rule 21    Structures -> DLQ
+Rule 22    Structures -> Map
+Rule 23    Structures -> AL
+Rule 24    Structures -> CDLL
+Rule 25    Structures -> AS
+Rule 26    Structures -> Set
+Rule 27    Structures -> Bag
+Rule 28    InputRequiredStruct -> Tree Id Assign LP Comparator RP
+Rule 29    InputRequiredStruct -> SArrayList Id Assign LP Comparator Separator Comparator RP
+Rule 30    InputOptionalStruct -> HSOA Id Assign LP Comparator Separator Comparator RP
+Rule 31    InputOptionalStruct -> HSSC Id Assign LP Comparator Separator Comparator RP
+Rule 32    InputOptionalStruct -> HSSC Id Assign LP RP
+Rule 33    InputOptionalStruct -> HSOA Id Assign LP RP
+Rule 34    Comparator -> NumberComp
+Rule 35    Comparator -> StringComp
+Rule 36    Id -> character
+Rule 37    Id -> Id digit
+Rule 38    Id -> Id character
+Rule 39    Bool -> True
+Rule 40    Bool -> False
+Rule 41    Int -> digit
+Rule 42    Int -> Int digit
+Rule 43    String -> Comillas Prim Comillas
+Rule 44    String -> Comillas Tuples Comillas
+
+Terminals, with rules where they appear
+
+AL                   : 23
+AS                   : 25
+Assign               : 9 12 28 29 30 31 32 33
+Bag                  : 27
+CDLL                 : 24
+Comillas             : 43 43 44 44
+DLQ                  : 21
+False                : 40
+GT                   : 7 8 9 10 11 12
+HSOA                 : 30 33
+HSSC                 : 31 32
+LP                   : 13 28 29 30 31 32 33
+LT                   : 7 8 9 10 11 12
+Map                  : 22
+None                 : 
+NumberComp           : 34
+RP                   : 13 28 29 30 31 32 33
+SArrayList           : 29
+SLL                  : 
+Separator            : 2 3 13 15 29 30 31
+Set                  : 26
+StringComp           : 35
+Tree                 : 28
+True                 : 39
+add                  : 4 5
+character            : 36 38
+digit                : 37 41 42
+error                : 
+print                : 6
+use                  : 4 5
+
+Nonterminals, with rules where they appear
+
+Action               : 3
+Bool                 : 17
+Comparator           : 28 29 29 30 30 31 31
+Declaration          : 1 2
+Elements             : 7 8 9 15 15
+Id                   : 4 5 6 9 12 19 28 29 30 31 32 33 37 38
+InputOptionalStruct  : 7 10
+InputRequiredStruct  : 8 11
+Int                  : 18 42
+Prim                 : 4 13 13 14 43
+Program              : 2 3 0
+String               : 20
+Structures           : 9 12
+Tuples               : 5 16 44
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Program
+    (1) Program -> . Declaration
+    (2) Program -> . Program Separator Declaration
+    (3) Program -> . Program Separator Action
+    (7) Declaration -> . InputOptionalStruct LT Elements GT
+    (8) Declaration -> . InputRequiredStruct LT Elements GT
+    (9) Declaration -> . Structures Id Assign LT Elements GT
+    (10) Declaration -> . InputOptionalStruct LT GT
+    (11) Declaration -> . InputRequiredStruct LT GT
+    (12) Declaration -> . Structures Id Assign LT GT
+    (30) InputOptionalStruct -> . HSOA Id Assign LP Comparator Separator Comparator RP
+    (31) InputOptionalStruct -> . HSSC Id Assign LP Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> . HSSC Id Assign LP RP
+    (33) InputOptionalStruct -> . HSOA Id Assign LP RP
+    (28) InputRequiredStruct -> . Tree Id Assign LP Comparator RP
+    (29) InputRequiredStruct -> . SArrayList Id Assign LP Comparator Separator Comparator RP
+    (21) Structures -> . DLQ
+    (22) Structures -> . Map
+    (23) Structures -> . AL
+    (24) Structures -> . CDLL
+    (25) Structures -> . AS
+    (26) Structures -> . Set
+    (27) Structures -> . Bag
+
+    HSOA            shift and go to state 6
+    HSSC            shift and go to state 7
+    Tree            shift and go to state 8
+    SArrayList      shift and go to state 9
+    DLQ             shift and go to state 10
+    Map             shift and go to state 11
+    AL              shift and go to state 12
+    CDLL            shift and go to state 13
+    AS              shift and go to state 14
+    Set             shift and go to state 15
+    Bag             shift and go to state 16
+
+    Program                        shift and go to state 1
+    Declaration                    shift and go to state 2
+    InputOptionalStruct            shift and go to state 3
+    InputRequiredStruct            shift and go to state 4
+    Structures                     shift and go to state 5
+
+state 1
+
+    (0) S' -> Program .
+    (2) Program -> Program . Separator Declaration
+    (3) Program -> Program . Separator Action
+
+    Separator       shift and go to state 17
+
+
+state 2
+
+    (1) Program -> Declaration .
+
+    Separator       reduce using rule 1 (Program -> Declaration .)
+    $end            reduce using rule 1 (Program -> Declaration .)
+
+
+state 3
+
+    (7) Declaration -> InputOptionalStruct . LT Elements GT
+    (10) Declaration -> InputOptionalStruct . LT GT
+
+    LT              shift and go to state 18
+
+
+state 4
+
+    (8) Declaration -> InputRequiredStruct . LT Elements GT
+    (11) Declaration -> InputRequiredStruct . LT GT
+
+    LT              shift and go to state 19
+
+
+state 5
+
+    (9) Declaration -> Structures . Id Assign LT Elements GT
+    (12) Declaration -> Structures . Id Assign LT GT
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 20
+
+state 6
+
+    (30) InputOptionalStruct -> HSOA . Id Assign LP Comparator Separator Comparator RP
+    (33) InputOptionalStruct -> HSOA . Id Assign LP RP
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 22
+
+state 7
+
+    (31) InputOptionalStruct -> HSSC . Id Assign LP Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> HSSC . Id Assign LP RP
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 23
+
+state 8
+
+    (28) InputRequiredStruct -> Tree . Id Assign LP Comparator RP
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 24
+
+state 9
+
+    (29) InputRequiredStruct -> SArrayList . Id Assign LP Comparator Separator Comparator RP
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 25
+
+state 10
+
+    (21) Structures -> DLQ .
+
+    character       reduce using rule 21 (Structures -> DLQ .)
+
+
+state 11
+
+    (22) Structures -> Map .
+
+    character       reduce using rule 22 (Structures -> Map .)
+
+
+state 12
+
+    (23) Structures -> AL .
+
+    character       reduce using rule 23 (Structures -> AL .)
+
+
+state 13
+
+    (24) Structures -> CDLL .
+
+    character       reduce using rule 24 (Structures -> CDLL .)
+
+
+state 14
+
+    (25) Structures -> AS .
+
+    character       reduce using rule 25 (Structures -> AS .)
+
+
+state 15
+
+    (26) Structures -> Set .
+
+    character       reduce using rule 26 (Structures -> Set .)
+
+
+state 16
+
+    (27) Structures -> Bag .
+
+    character       reduce using rule 27 (Structures -> Bag .)
+
+
+state 17
+
+    (2) Program -> Program Separator . Declaration
+    (3) Program -> Program Separator . Action
+    (7) Declaration -> . InputOptionalStruct LT Elements GT
+    (8) Declaration -> . InputRequiredStruct LT Elements GT
+    (9) Declaration -> . Structures Id Assign LT Elements GT
+    (10) Declaration -> . InputOptionalStruct LT GT
+    (11) Declaration -> . InputRequiredStruct LT GT
+    (12) Declaration -> . Structures Id Assign LT GT
+    (4) Action -> . use Id add Prim
+    (5) Action -> . use Id add Tuples
+    (6) Action -> . print Id
+    (30) InputOptionalStruct -> . HSOA Id Assign LP Comparator Separator Comparator RP
+    (31) InputOptionalStruct -> . HSSC Id Assign LP Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> . HSSC Id Assign LP RP
+    (33) InputOptionalStruct -> . HSOA Id Assign LP RP
+    (28) InputRequiredStruct -> . Tree Id Assign LP Comparator RP
+    (29) InputRequiredStruct -> . SArrayList Id Assign LP Comparator Separator Comparator RP
+    (21) Structures -> . DLQ
+    (22) Structures -> . Map
+    (23) Structures -> . AL
+    (24) Structures -> . CDLL
+    (25) Structures -> . AS
+    (26) Structures -> . Set
+    (27) Structures -> . Bag
+
+    use             shift and go to state 28
+    print           shift and go to state 29
+    HSOA            shift and go to state 6
+    HSSC            shift and go to state 7
+    Tree            shift and go to state 8
+    SArrayList      shift and go to state 9
+    DLQ             shift and go to state 10
+    Map             shift and go to state 11
+    AL              shift and go to state 12
+    CDLL            shift and go to state 13
+    AS              shift and go to state 14
+    Set             shift and go to state 15
+    Bag             shift and go to state 16
+
+    Declaration                    shift and go to state 26
+    Action                         shift and go to state 27
+    InputOptionalStruct            shift and go to state 3
+    InputRequiredStruct            shift and go to state 4
+    Structures                     shift and go to state 5
+
+state 18
+
+    (7) Declaration -> InputOptionalStruct LT . Elements GT
+    (10) Declaration -> InputOptionalStruct LT . GT
+    (14) Elements -> . Prim
+    (15) Elements -> . Elements Separator Elements
+    (16) Elements -> . Tuples
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    GT              shift and go to state 31
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Elements                       shift and go to state 30
+    Prim                           shift and go to state 32
+    Tuples                         shift and go to state 33
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 19
+
+    (8) Declaration -> InputRequiredStruct LT . Elements GT
+    (11) Declaration -> InputRequiredStruct LT . GT
+    (14) Elements -> . Prim
+    (15) Elements -> . Elements Separator Elements
+    (16) Elements -> . Tuples
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    GT              shift and go to state 44
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Elements                       shift and go to state 43
+    Prim                           shift and go to state 32
+    Tuples                         shift and go to state 33
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 20
+
+    (9) Declaration -> Structures Id . Assign LT Elements GT
+    (12) Declaration -> Structures Id . Assign LT GT
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Assign          shift and go to state 45
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 21
+
+    (36) Id -> character .
+
+    Assign          reduce using rule 36 (Id -> character .)
+    digit           reduce using rule 36 (Id -> character .)
+    character       reduce using rule 36 (Id -> character .)
+    GT              reduce using rule 36 (Id -> character .)
+    Separator       reduce using rule 36 (Id -> character .)
+    add             reduce using rule 36 (Id -> character .)
+    $end            reduce using rule 36 (Id -> character .)
+    Comillas        reduce using rule 36 (Id -> character .)
+    RP              reduce using rule 36 (Id -> character .)
+
+
+state 22
+
+    (30) InputOptionalStruct -> HSOA Id . Assign LP Comparator Separator Comparator RP
+    (33) InputOptionalStruct -> HSOA Id . Assign LP RP
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Assign          shift and go to state 48
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 23
+
+    (31) InputOptionalStruct -> HSSC Id . Assign LP Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> HSSC Id . Assign LP RP
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Assign          shift and go to state 49
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 24
+
+    (28) InputRequiredStruct -> Tree Id . Assign LP Comparator RP
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Assign          shift and go to state 50
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 25
+
+    (29) InputRequiredStruct -> SArrayList Id . Assign LP Comparator Separator Comparator RP
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Assign          shift and go to state 51
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 26
+
+    (2) Program -> Program Separator Declaration .
+
+    Separator       reduce using rule 2 (Program -> Program Separator Declaration .)
+    $end            reduce using rule 2 (Program -> Program Separator Declaration .)
+
+
+state 27
+
+    (3) Program -> Program Separator Action .
+
+    Separator       reduce using rule 3 (Program -> Program Separator Action .)
+    $end            reduce using rule 3 (Program -> Program Separator Action .)
+
+
+state 28
+
+    (4) Action -> use . Id add Prim
+    (5) Action -> use . Id add Tuples
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 52
+
+state 29
+
+    (6) Action -> print . Id
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+
+    character       shift and go to state 21
+
+    Id                             shift and go to state 53
+
+state 30
+
+    (7) Declaration -> InputOptionalStruct LT Elements . GT
+    (15) Elements -> Elements . Separator Elements
+
+    GT              shift and go to state 54
+    Separator       shift and go to state 55
+
+
+state 31
+
+    (10) Declaration -> InputOptionalStruct LT GT .
+
+    Separator       reduce using rule 10 (Declaration -> InputOptionalStruct LT GT .)
+    $end            reduce using rule 10 (Declaration -> InputOptionalStruct LT GT .)
+
+
+state 32
+
+    (14) Elements -> Prim .
+
+    GT              reduce using rule 14 (Elements -> Prim .)
+    Separator       reduce using rule 14 (Elements -> Prim .)
+
+
+state 33
+
+    (16) Elements -> Tuples .
+
+    GT              reduce using rule 16 (Elements -> Tuples .)
+    Separator       reduce using rule 16 (Elements -> Tuples .)
+
+
+state 34
+
+    (17) Prim -> Bool .
+
+    GT              reduce using rule 17 (Prim -> Bool .)
+    Separator       reduce using rule 17 (Prim -> Bool .)
+    Comillas        reduce using rule 17 (Prim -> Bool .)
+    $end            reduce using rule 17 (Prim -> Bool .)
+    RP              reduce using rule 17 (Prim -> Bool .)
+
+
+state 35
+
+    (18) Prim -> Int .
+    (42) Int -> Int . digit
+
+    GT              reduce using rule 18 (Prim -> Int .)
+    Separator       reduce using rule 18 (Prim -> Int .)
+    Comillas        reduce using rule 18 (Prim -> Int .)
+    $end            reduce using rule 18 (Prim -> Int .)
+    RP              reduce using rule 18 (Prim -> Int .)
+    digit           shift and go to state 56
+
+
+state 36
+
+    (19) Prim -> Id .
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    GT              reduce using rule 19 (Prim -> Id .)
+    Separator       reduce using rule 19 (Prim -> Id .)
+    Comillas        reduce using rule 19 (Prim -> Id .)
+    $end            reduce using rule 19 (Prim -> Id .)
+    RP              reduce using rule 19 (Prim -> Id .)
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 37
+
+    (20) Prim -> String .
+
+    GT              reduce using rule 20 (Prim -> String .)
+    Separator       reduce using rule 20 (Prim -> String .)
+    Comillas        reduce using rule 20 (Prim -> String .)
+    $end            reduce using rule 20 (Prim -> String .)
+    RP              reduce using rule 20 (Prim -> String .)
+
+
+state 38
+
+    (13) Tuples -> LP . Prim Separator Prim RP
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Prim                           shift and go to state 57
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 39
+
+    (39) Bool -> True .
+
+    GT              reduce using rule 39 (Bool -> True .)
+    Separator       reduce using rule 39 (Bool -> True .)
+    Comillas        reduce using rule 39 (Bool -> True .)
+    $end            reduce using rule 39 (Bool -> True .)
+    RP              reduce using rule 39 (Bool -> True .)
+
+
+state 40
+
+    (40) Bool -> False .
+
+    GT              reduce using rule 40 (Bool -> False .)
+    Separator       reduce using rule 40 (Bool -> False .)
+    Comillas        reduce using rule 40 (Bool -> False .)
+    $end            reduce using rule 40 (Bool -> False .)
+    RP              reduce using rule 40 (Bool -> False .)
+
+
+state 41
+
+    (41) Int -> digit .
+
+    digit           reduce using rule 41 (Int -> digit .)
+    GT              reduce using rule 41 (Int -> digit .)
+    Separator       reduce using rule 41 (Int -> digit .)
+    Comillas        reduce using rule 41 (Int -> digit .)
+    $end            reduce using rule 41 (Int -> digit .)
+    RP              reduce using rule 41 (Int -> digit .)
+
+
+state 42
+
+    (43) String -> Comillas . Prim Comillas
+    (44) String -> Comillas . Tuples Comillas
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Prim                           shift and go to state 58
+    Tuples                         shift and go to state 59
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 43
+
+    (8) Declaration -> InputRequiredStruct LT Elements . GT
+    (15) Elements -> Elements . Separator Elements
+
+    GT              shift and go to state 60
+    Separator       shift and go to state 55
+
+
+state 44
+
+    (11) Declaration -> InputRequiredStruct LT GT .
+
+    Separator       reduce using rule 11 (Declaration -> InputRequiredStruct LT GT .)
+    $end            reduce using rule 11 (Declaration -> InputRequiredStruct LT GT .)
+
+
+state 45
+
+    (9) Declaration -> Structures Id Assign . LT Elements GT
+    (12) Declaration -> Structures Id Assign . LT GT
+
+    LT              shift and go to state 61
+
+
+state 46
+
+    (37) Id -> Id digit .
+
+    Assign          reduce using rule 37 (Id -> Id digit .)
+    digit           reduce using rule 37 (Id -> Id digit .)
+    character       reduce using rule 37 (Id -> Id digit .)
+    GT              reduce using rule 37 (Id -> Id digit .)
+    Separator       reduce using rule 37 (Id -> Id digit .)
+    add             reduce using rule 37 (Id -> Id digit .)
+    $end            reduce using rule 37 (Id -> Id digit .)
+    Comillas        reduce using rule 37 (Id -> Id digit .)
+    RP              reduce using rule 37 (Id -> Id digit .)
+
+
+state 47
+
+    (38) Id -> Id character .
+
+    Assign          reduce using rule 38 (Id -> Id character .)
+    digit           reduce using rule 38 (Id -> Id character .)
+    character       reduce using rule 38 (Id -> Id character .)
+    GT              reduce using rule 38 (Id -> Id character .)
+    Separator       reduce using rule 38 (Id -> Id character .)
+    add             reduce using rule 38 (Id -> Id character .)
+    $end            reduce using rule 38 (Id -> Id character .)
+    Comillas        reduce using rule 38 (Id -> Id character .)
+    RP              reduce using rule 38 (Id -> Id character .)
+
+
+state 48
+
+    (30) InputOptionalStruct -> HSOA Id Assign . LP Comparator Separator Comparator RP
+    (33) InputOptionalStruct -> HSOA Id Assign . LP RP
+
+    LP              shift and go to state 62
+
+
+state 49
+
+    (31) InputOptionalStruct -> HSSC Id Assign . LP Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> HSSC Id Assign . LP RP
+
+    LP              shift and go to state 63
+
+
+state 50
+
+    (28) InputRequiredStruct -> Tree Id Assign . LP Comparator RP
+
+    LP              shift and go to state 64
+
+
+state 51
+
+    (29) InputRequiredStruct -> SArrayList Id Assign . LP Comparator Separator Comparator RP
+
+    LP              shift and go to state 65
+
+
+state 52
+
+    (4) Action -> use Id . add Prim
+    (5) Action -> use Id . add Tuples
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    add             shift and go to state 66
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 53
+
+    (6) Action -> print Id .
+    (37) Id -> Id . digit
+    (38) Id -> Id . character
+
+    Separator       reduce using rule 6 (Action -> print Id .)
+    $end            reduce using rule 6 (Action -> print Id .)
+    digit           shift and go to state 46
+    character       shift and go to state 47
+
+
+state 54
+
+    (7) Declaration -> InputOptionalStruct LT Elements GT .
+
+    Separator       reduce using rule 7 (Declaration -> InputOptionalStruct LT Elements GT .)
+    $end            reduce using rule 7 (Declaration -> InputOptionalStruct LT Elements GT .)
+
+
+state 55
+
+    (15) Elements -> Elements Separator . Elements
+    (14) Elements -> . Prim
+    (15) Elements -> . Elements Separator Elements
+    (16) Elements -> . Tuples
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Elements                       shift and go to state 67
+    Prim                           shift and go to state 32
+    Tuples                         shift and go to state 33
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 56
+
+    (42) Int -> Int digit .
+
+    digit           reduce using rule 42 (Int -> Int digit .)
+    GT              reduce using rule 42 (Int -> Int digit .)
+    Separator       reduce using rule 42 (Int -> Int digit .)
+    Comillas        reduce using rule 42 (Int -> Int digit .)
+    $end            reduce using rule 42 (Int -> Int digit .)
+    RP              reduce using rule 42 (Int -> Int digit .)
+
+
+state 57
+
+    (13) Tuples -> LP Prim . Separator Prim RP
+
+    Separator       shift and go to state 68
+
+
+state 58
+
+    (43) String -> Comillas Prim . Comillas
+
+    Comillas        shift and go to state 69
+
+
+state 59
+
+    (44) String -> Comillas Tuples . Comillas
+
+    Comillas        shift and go to state 70
+
+
+state 60
+
+    (8) Declaration -> InputRequiredStruct LT Elements GT .
+
+    Separator       reduce using rule 8 (Declaration -> InputRequiredStruct LT Elements GT .)
+    $end            reduce using rule 8 (Declaration -> InputRequiredStruct LT Elements GT .)
+
+
+state 61
+
+    (9) Declaration -> Structures Id Assign LT . Elements GT
+    (12) Declaration -> Structures Id Assign LT . GT
+    (14) Elements -> . Prim
+    (15) Elements -> . Elements Separator Elements
+    (16) Elements -> . Tuples
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    GT              shift and go to state 72
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Id                             shift and go to state 36
+    Elements                       shift and go to state 71
+    Prim                           shift and go to state 32
+    Tuples                         shift and go to state 33
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    String                         shift and go to state 37
+
+state 62
+
+    (30) InputOptionalStruct -> HSOA Id Assign LP . Comparator Separator Comparator RP
+    (33) InputOptionalStruct -> HSOA Id Assign LP . RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    RP              shift and go to state 74
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 73
+
+state 63
+
+    (31) InputOptionalStruct -> HSSC Id Assign LP . Comparator Separator Comparator RP
+    (32) InputOptionalStruct -> HSSC Id Assign LP . RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    RP              shift and go to state 78
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 77
+
+state 64
+
+    (28) InputRequiredStruct -> Tree Id Assign LP . Comparator RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 79
+
+state 65
+
+    (29) InputRequiredStruct -> SArrayList Id Assign LP . Comparator Separator Comparator RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 80
+
+state 66
+
+    (4) Action -> use Id add . Prim
+    (5) Action -> use Id add . Tuples
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (13) Tuples -> . LP Prim Separator Prim RP
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    LP              shift and go to state 38
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Id                             shift and go to state 36
+    Prim                           shift and go to state 81
+    Tuples                         shift and go to state 82
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    String                         shift and go to state 37
+
+state 67
+
+    (15) Elements -> Elements Separator Elements .
+    (15) Elements -> Elements . Separator Elements
+
+  ! shift/reduce conflict for Separator resolved as shift
+    GT              reduce using rule 15 (Elements -> Elements Separator Elements .)
+    Separator       shift and go to state 55
+
+  ! Separator       [ reduce using rule 15 (Elements -> Elements Separator Elements .) ]
+
+
+state 68
+
+    (13) Tuples -> LP Prim Separator . Prim RP
+    (17) Prim -> . Bool
+    (18) Prim -> . Int
+    (19) Prim -> . Id
+    (20) Prim -> . String
+    (39) Bool -> . True
+    (40) Bool -> . False
+    (41) Int -> . digit
+    (42) Int -> . Int digit
+    (36) Id -> . character
+    (37) Id -> . Id digit
+    (38) Id -> . Id character
+    (43) String -> . Comillas Prim Comillas
+    (44) String -> . Comillas Tuples Comillas
+
+    True            shift and go to state 39
+    False           shift and go to state 40
+    digit           shift and go to state 41
+    character       shift and go to state 21
+    Comillas        shift and go to state 42
+
+    Prim                           shift and go to state 83
+    Bool                           shift and go to state 34
+    Int                            shift and go to state 35
+    Id                             shift and go to state 36
+    String                         shift and go to state 37
+
+state 69
+
+    (43) String -> Comillas Prim Comillas .
+
+    GT              reduce using rule 43 (String -> Comillas Prim Comillas .)
+    Separator       reduce using rule 43 (String -> Comillas Prim Comillas .)
+    Comillas        reduce using rule 43 (String -> Comillas Prim Comillas .)
+    $end            reduce using rule 43 (String -> Comillas Prim Comillas .)
+    RP              reduce using rule 43 (String -> Comillas Prim Comillas .)
+
+
+state 70
+
+    (44) String -> Comillas Tuples Comillas .
+
+    GT              reduce using rule 44 (String -> Comillas Tuples Comillas .)
+    Separator       reduce using rule 44 (String -> Comillas Tuples Comillas .)
+    Comillas        reduce using rule 44 (String -> Comillas Tuples Comillas .)
+    $end            reduce using rule 44 (String -> Comillas Tuples Comillas .)
+    RP              reduce using rule 44 (String -> Comillas Tuples Comillas .)
+
+
+state 71
+
+    (9) Declaration -> Structures Id Assign LT Elements . GT
+    (15) Elements -> Elements . Separator Elements
+
+    GT              shift and go to state 84
+    Separator       shift and go to state 55
+
+
+state 72
+
+    (12) Declaration -> Structures Id Assign LT GT .
+
+    Separator       reduce using rule 12 (Declaration -> Structures Id Assign LT GT .)
+    $end            reduce using rule 12 (Declaration -> Structures Id Assign LT GT .)
+
+
+state 73
+
+    (30) InputOptionalStruct -> HSOA Id Assign LP Comparator . Separator Comparator RP
+
+    Separator       shift and go to state 85
+
+
+state 74
+
+    (33) InputOptionalStruct -> HSOA Id Assign LP RP .
+
+    LT              reduce using rule 33 (InputOptionalStruct -> HSOA Id Assign LP RP .)
+
+
+state 75
+
+    (34) Comparator -> NumberComp .
+
+    Separator       reduce using rule 34 (Comparator -> NumberComp .)
+    RP              reduce using rule 34 (Comparator -> NumberComp .)
+
+
+state 76
+
+    (35) Comparator -> StringComp .
+
+    Separator       reduce using rule 35 (Comparator -> StringComp .)
+    RP              reduce using rule 35 (Comparator -> StringComp .)
+
+
+state 77
+
+    (31) InputOptionalStruct -> HSSC Id Assign LP Comparator . Separator Comparator RP
+
+    Separator       shift and go to state 86
+
+
+state 78
+
+    (32) InputOptionalStruct -> HSSC Id Assign LP RP .
+
+    LT              reduce using rule 32 (InputOptionalStruct -> HSSC Id Assign LP RP .)
+
+
+state 79
+
+    (28) InputRequiredStruct -> Tree Id Assign LP Comparator . RP
+
+    RP              shift and go to state 87
+
+
+state 80
+
+    (29) InputRequiredStruct -> SArrayList Id Assign LP Comparator . Separator Comparator RP
+
+    Separator       shift and go to state 88
+
+
+state 81
+
+    (4) Action -> use Id add Prim .
+
+    Separator       reduce using rule 4 (Action -> use Id add Prim .)
+    $end            reduce using rule 4 (Action -> use Id add Prim .)
+
+
+state 82
+
+    (5) Action -> use Id add Tuples .
+
+    Separator       reduce using rule 5 (Action -> use Id add Tuples .)
+    $end            reduce using rule 5 (Action -> use Id add Tuples .)
+
+
+state 83
+
+    (13) Tuples -> LP Prim Separator Prim . RP
+
+    RP              shift and go to state 89
+
+
+state 84
+
+    (9) Declaration -> Structures Id Assign LT Elements GT .
+
+    Separator       reduce using rule 9 (Declaration -> Structures Id Assign LT Elements GT .)
+    $end            reduce using rule 9 (Declaration -> Structures Id Assign LT Elements GT .)
+
+
+state 85
+
+    (30) InputOptionalStruct -> HSOA Id Assign LP Comparator Separator . Comparator RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 90
+
+state 86
+
+    (31) InputOptionalStruct -> HSSC Id Assign LP Comparator Separator . Comparator RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 91
+
+state 87
+
+    (28) InputRequiredStruct -> Tree Id Assign LP Comparator RP .
+
+    LT              reduce using rule 28 (InputRequiredStruct -> Tree Id Assign LP Comparator RP .)
+
+
+state 88
+
+    (29) InputRequiredStruct -> SArrayList Id Assign LP Comparator Separator . Comparator RP
+    (34) Comparator -> . NumberComp
+    (35) Comparator -> . StringComp
+
+    NumberComp      shift and go to state 75
+    StringComp      shift and go to state 76
+
+    Comparator                     shift and go to state 92
+
+state 89
+
+    (13) Tuples -> LP Prim Separator Prim RP .
+
+    GT              reduce using rule 13 (Tuples -> LP Prim Separator Prim RP .)
+    Separator       reduce using rule 13 (Tuples -> LP Prim Separator Prim RP .)
+    Comillas        reduce using rule 13 (Tuples -> LP Prim Separator Prim RP .)
+    $end            reduce using rule 13 (Tuples -> LP Prim Separator Prim RP .)
+
+
+state 90
+
+    (30) InputOptionalStruct -> HSOA Id Assign LP Comparator Separator Comparator . RP
+
+    RP              shift and go to state 93
+
+
+state 91
+
+    (31) InputOptionalStruct -> HSSC Id Assign LP Comparator Separator Comparator . RP
+
+    RP              shift and go to state 94
+
+
+state 92
+
+    (29) InputRequiredStruct -> SArrayList Id Assign LP Comparator Separator Comparator . RP
+
+    RP              shift and go to state 95
+
+
+state 93
+
+    (30) InputOptionalStruct -> HSOA Id Assign LP Comparator Separator Comparator RP .
+
+    LT              reduce using rule 30 (InputOptionalStruct -> HSOA Id Assign LP Comparator Separator Comparator RP .)
+
+
+state 94
+
+    (31) InputOptionalStruct -> HSSC Id Assign LP Comparator Separator Comparator RP .
+
+    LT              reduce using rule 31 (InputOptionalStruct -> HSSC Id Assign LP Comparator Separator Comparator RP .)
+
+
+state 95
+
+    (29) InputRequiredStruct -> SArrayList Id Assign LP Comparator Separator Comparator RP .
+
+    LT              reduce using rule 29 (InputRequiredStruct -> SArrayList Id Assign LP Comparator Separator Comparator RP .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for Separator in state 67 resolved as shift

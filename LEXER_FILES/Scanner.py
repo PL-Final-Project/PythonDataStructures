@@ -1,12 +1,13 @@
 #Required imports
 from ply import lex
+from ply.lex import TOKEN
 from ply import yacc
 
 #Reserved keywords for the tokens.  
 reserved = {
-'ArrayStack': 'AS','SinglyLinkedList': 'SLL','CircularDoublyLinkedList': 'CDLL','ArrayList': 'AL',
+'ArrayStack': 'AS','SinglyLinkedList': 'SLL','CircularDoublyLinkedList': 'CDLL','ArrayList': 'AL', 'Set': 'Set', 'Bag': 'Bag',
 'Map': 'Map','HashTableSC': 'HSSC', 'HashTableOA': 'HSOA','DoublyLinkedQueue': 'DLQ','print': 'print','use': 'use','None': 'None',
-'StringComp': 'StringComp', 'NumberComp': 'NumberComp', 'BinarySearchTree': 'Tree', 'SortedArrayList': 'SArrayList'
+'StringComp': 'StringComp', 'NumberComp': 'NumberComp', 'BinarySearchTree': 'Tree', 'SortedArrayList': 'SArrayList','True':'True', 'False':'False'
 }
 
 #Tokens
@@ -24,8 +25,9 @@ t_Separator = r'\,'
 t_ignore = ' \t'
 t_Comillas = r'\"'
 
+
 def t_reserved(t):
-    r'ArrayStack |Queue | SinglyLinkedList | CircularDoublyLinkedList | ArrayList | Map | HashTableSC |HashTable OA |DoublyLinkedQueue |print |use |None'
+    r'ArrayStack | SinglyLinkedList | CircularDoublyLinkedList | ArrayList | Set | Bag | Map | HashTableSC | HashTableOA | DoublyLinkedQueue | print | use | None | StringComp | NumberComp | BinarySearchTree | SortedArrayList | True | False '
     if t.value in reserved:
         t.type = reserved[t.value]
     return t

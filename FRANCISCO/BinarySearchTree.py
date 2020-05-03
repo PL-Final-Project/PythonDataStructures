@@ -1,8 +1,8 @@
-from .BinaryTreeNode import BinaryTreeNode
-from .KeyValuePair import KeyValuePair
-from ALBERTO.PythonDS.MapInterface import MapInterface
-from ANDREW.LinkedList.SinglyLinkedList import SinglyLinkedList
-from ALBERTO.PythonDS.Sorted.Comparator import Comparator
+from BinaryTreeNode import BinaryTreeNode
+from KeyValuePair import KeyValuePair
+from MapInterface import MapInterface
+from SinglyLinkedList import SinglyLinkedList
+from Comparator import Comparator
 
 
 class BinarySearchTree(MapInterface):

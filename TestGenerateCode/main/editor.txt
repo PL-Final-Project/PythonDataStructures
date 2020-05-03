@@ -1,0 +1,5 @@
+BinarySearchTree c => (StringComp) <0,3,4,9,6,8,7,2,1,5>,
+print c,
+BinarySearchTree d => (StringComp) <0,1,2,3,4,5,6,7,8,9>,
+print d,
+Set set => <9,23,4,5,A,D>

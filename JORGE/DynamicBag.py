@@ -2,7 +2,7 @@ from BagInterface import BagInterface
 from collections import Counter
 
 
-class DynamicBag(BagInterface):
+class DynamicBag():
     def __init__(self):
         self.elements = []
         self.default_size = 10
@@ -20,10 +20,11 @@ class DynamicBag(BagInterface):
         return item in self.elements
 
     def count(self, item):
-        if item in self.elements:
-            return self.elements[item]
-        else:
-            return 0
+        result = 0
+        for i in range(0, len(self.elements)):
+            if self.elements[i] == item:
+                result += 1
+        return result
 
     def remove(self, item):
         self.elements.remove(item)
@@ -31,25 +32,14 @@ class DynamicBag(BagInterface):
 
     def removeAll(self, item):
         result = 0
-        while self.elements.remove(item):
+        while self.isMember(item):
+            self.elements.remove(item)
             result += 1
         return result
-
-def test():
-    temo_bag = DynamicBag()
-    temo_bag.add("hola")
-    temo_bag.add("hola")
-    temo_bag.add("hola")
-    temo_bag.add("hola")
-    temo_bag.add("hola")
-    temo_bag.removeAll("hola")
-
-
-
-
-if __name__ == '__main__':
-    # main()
-    test()
+    
+    def clear(self):
+        while not self.isEmpty():
+            self.remove(self.elements[0])
 
 
 
