@@ -27,19 +27,19 @@ class SetInterface(ABC):
         pass
 
     @abstractmethod
-    def isSubset(self, newdata: SetInterface):
+    def isSubset(self, newdata):
         pass
 
     @abstractmethod
-    def union(self, newdata: SetInterface):
+    def union(self, newdata):
         pass
 
     @abstractmethod
-    def difference(self, newdata: SetInterface):
+    def difference(self, newdata):
         pass
 
     @abstractmethod
-    def intersection(self, newdata: SetInterface):
+    def intersection(self, newdata):
         pass
 
     @abstractmethod
