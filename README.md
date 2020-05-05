@@ -11,6 +11,8 @@ The main purpose of this language is to be able to implement Data Structures eas
 
 ## Data Structures implemented:
 
+|        Structures        |                                   Methods                                   |
+|:------------------------:|:---------------------------------------------------------------------------:|
 | Map                      | size, isEmpty, get, put, remove, makeEmpty, containsKey, getKeys, getValues |
 | SinglyLinkedList         | add, print, isEmpty, clear, get, removeLast, size                           |
 | CircularDoublyLinkedList | add, print, isEmpty, clear, get, removeLast, size                           |
