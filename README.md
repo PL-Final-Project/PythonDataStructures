@@ -1,39 +1,27 @@
-# PythonDataStructures
-/--------\
+# Welcome to the PyDa documentation webpage
+## Authors of this project:
 
+ - Alberto I. Cruz Salamán
+ - Andrew González Pérez
+ - Jorge Ortiz 
+ - Francisco J. Vera Orengo
+## Purpose of this language:
+The main purpose of this language is to be able to implement Data Structures easily in a format which most programmers are used to. The language used to base this program is Python. Python is the third most popular language in the world right now according to [Tiobe](https://www.tiobe.com/tiobe-index/). For this reason, we decided to implement the structures in Python for newcomers to be able to see how they work "behind the hood" if they wish, but the main goal is to be able to quickly implement data structures with its methods without coding them.
 
-PROJECT CURRENTLY HOLDS:
+## Data Structures implemented:
+|Structures| Methods|
+|--|--|
+| Map|  size, isEmpty, get, put, remove, makeEmpty, containsKey, getKeys, getValues|
+|SinglyLinkedList|add, print, isEmpty, clear, get, removeLast, size|
+|CircularDoublyLinkedList| add, print, isEmpty, clear, get, removeLast, size|
+|BinarySearchTree|isEmpty, get, put, containsKey, getKeys, getValues|
+|DoublyLinkedQueue|size, isEmpty, front, dequeue, enqueue, makeEmpty|
+|ArrayStack|isEmpty, push, pop, print|
+|DynamicBag|size, isEmpty, add, isMember, remove, removeAll, clear|
+|ArraySet|size, isEmpty, add, isMember, remove, clear|
 
+## Method of implementation
+In order to implement these data structures, every team member decided to code at least one of them in Python. The reason to choose this language was that it would be easier to import them in order for the parser to use it to generate intermediate code. After doing this, the scanner was implemented using lex from a library called [PLY](https://www.dabeaz.com/ply/). After defining the tokens and the structure of the program in the scanner, the parser and intermediate code was also designed using PLY, since its such a useful tool which facilitates the process. 
 
-.Various implementations of Data Structures in Python to be used in secondary language that it's on development.
-.Beginnings of simplified language for fast DS creation.
-
-
-\--------/
-
-
-//------\\
-
-
-.The objective of the project is to develop a Lexer and Parser component that will read a specific programming language (currently on development) that it's designed to generate some customized data structures in the python programming language and to give these usage to store and contain information.
-
-
-\\------//
-
-
-//------\\
-
-
-.PLY lexer and yacc modules are the key components in the full development of the language. Syntatic rules and restrictions will be specified for the new language in order to reduce and customize the creation and format of said data structures.
-
-
-\\------//
-
-
-//------\\
-
-
-.The expected outcome of the project is a user friendly language that allows a rapid and intuitive materialization of complex DS.
-
-
-\\------//
+## How to run PyDa
+In order to run PyDa, you need to have Python 3.6 downloaded and the IDE of your preference. After importing the files, click the run button. A text file should pop up, which 
