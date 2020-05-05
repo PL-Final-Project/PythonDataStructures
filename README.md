@@ -10,8 +10,7 @@
 The main purpose of this language is to be able to implement Data Structures easily in a format which most programmers are used to. The language used to base this program is Python. Python is the third most popular language in the world right now according to [Tiobe](https://www.tiobe.com/tiobe-index/). For this reason, we decided to implement the structures in Python for newcomers to be able to see how they work "behind the hood" if they wish, but the main goal is to be able to quickly implement data structures with its methods without coding them. The motivation behind this language is to help others to see the power of using Data Structures to store data in different formats.
 
 ## Data Structures implemented:
-|        Structures        |                                   Methods                                   |
-|:------------------------:|:---------------------------------------------------------------------------:|
+
 | Map                      | size, isEmpty, get, put, remove, makeEmpty, containsKey, getKeys, getValues |
 | SinglyLinkedList         | add, print, isEmpty, clear, get, removeLast, size                           |
 | CircularDoublyLinkedList | add, print, isEmpty, clear, get, removeLast, size                           |
