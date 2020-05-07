@@ -29,10 +29,9 @@ while True:
             print('TESTING INPUT FILE')
             s = textToAnalyze
             count += 1
-        else:
-            s = raw_input('calc > ')
     except EOFError:
         break
     if not s: continue
     result = parser.parse(s, debug=log)
     print(result)
+    break
