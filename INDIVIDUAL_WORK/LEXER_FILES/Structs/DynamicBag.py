@@ -1,7 +1,12 @@
+<<<<<<< HEAD:INDIVIDUAL_WORK/LEXER_FILES/Structs/DynamicBag.py
 from Structs.BagInterface import BagInterface
+=======
+import BagInterface
+from abc import ABC
+>>>>>>> 97b0ec7214dea84d30b6817131596f75cc4a7d89:JORGE/DynamicBag.py
 
 
-class DynamicBag(BagInterface):
+class DynamicBag(BagInterface.BagInterface, ABC):
     def __init__(self):
         self.elements = []
         self.default_size = 10
@@ -19,10 +24,11 @@ class DynamicBag(BagInterface):
         return item in self.elements
 
     def count(self, item):
-        if item in self.elements:
-            return self.elements[item]
-        else:
-            return 0
+        result = 0
+        for i in range(0, len(self.elements)):
+            if self.elements[i] == item:
+                result += 1
+        return result
 
     def remove(self, item):
         self.elements.remove(item)
@@ -30,10 +36,31 @@ class DynamicBag(BagInterface):
 
     def removeAll(self, item):
         result = 0
-        while self.elements.remove(item):
+        while self.isMember(item):
+            self.elements.remove(item)
             result += 1
-        return result
+        return 'removed {0} '.format(result)
+    def clear(self):
+        while not self.isEmpty():
+            self.remove(self.elements[0])
 
+
+temp = DynamicBag()
+temp.add('hi')
+temp.add('hi')
+temp.add('jose')
+print(temp.elements)
+print(temp.count('hi'))
+print(temp.size())
+print(temp.remove('jose'))
+print(temp.removeAll('hi'))
+print(temp.elements)
+temp.add('go')
+print(temp.elements)
+temp.clear()
+print(temp.elements)
+
+<<<<<<< HEAD:INDIVIDUAL_WORK/LEXER_FILES/Structs/DynamicBag.py
     def clear(self):
         self.elements.clear()
 
@@ -45,13 +72,12 @@ def test():
     temo_bag.add("hola")
     temo_bag.add("hola")
     temo_bag.removeAll("hola")
+=======
+>>>>>>> 97b0ec7214dea84d30b6817131596f75cc4a7d89:JORGE/DynamicBag.py
 
 
 
 
-if __name__ == '__main__':
-    # main()
-    test()
 
 
 

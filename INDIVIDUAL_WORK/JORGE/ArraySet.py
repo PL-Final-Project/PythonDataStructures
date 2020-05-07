@@ -1,8 +1,8 @@
+import SetInterface
 from abc import ABC
-from SetInterface import SetInterface
 
 
-class ArraySet(SetInterface, ABC):
+class ArraySet(SetInterface.SetInterface, ABC):
 
     def __init__(self):
         self.elements = []
@@ -28,38 +28,68 @@ class ArraySet(SetInterface, ABC):
         return True
 
     def clear(self):
-        for item in self.elements:
-            self.elements.remove(item)
+        while not self.isEmpty():
+            self.remove(self.elements[0])
 
-    def isSubset(self, newdata: ArraySet):
-        for i in newdata:
-            if not newdata.isMember(self.elements[i]):
+    def isSubset(self, data):
+        for i in range(0, self.size()):
+            if not data.isMember(self.elements[i]):
                 return False
 
         return True
 
-    def union(self, newdata: ArraySet):
+    def union(self, data):
         result = []
-        result.extend(self.elements)
-        for item in newdata:
-            if not result.isMember(item):
-                result.append(item)
+        for i in self.elements:
+            result.append(i)
+
+        temp = data.toArray()
+        for i in range(0, data.size()):
+            if not temp[i] in result:
+                result.append(temp[i])
+
+        final = ArraySet()
+        for i in result:
+            final.add(i)
+
+        return final
+
+    def difference(self, data):
+        result = []
+        for i in self.elements:
+            if not data.isMember(i):
+                result.append(i)
+
+        final = ArraySet()
+        for i in result:
+            final.add(i)
+
+        return final
+
+    def intersection(self, data):
+        return self.difference(self.difference(data))
+
+    def toArray(self):
+        result = []
+        for i in self.elements:
+            result.append(i)
 
         return result
 
-    def difference(self, newdata: ArraySet):
-        result = []
-        for item in self.elements:
-            if not newdata.isMember(item):
-                result.append(item)
 
-        return result
-
-    def intersection(self, newdata: ArraySet):
-        return self.elements.difference(self.elements.difference(newdata))
-
-
-
+temp = ArraySet()
+temp_2 = ArraySet()
+temp.add('hi')
+temp.add('nigga')
+temp.add('apu')
+temp_2.add('hi')
+temp_2.add('nigga')
+temp_2.add('joe')
+temp_3 = temp_2.difference(temp).elements
+temp_4 = temp.intersection(temp_2).elements
 
 
-
+print(temp.elements)
+print(temp_2.elements)
+print(temp_3)
+print(temp_4)
