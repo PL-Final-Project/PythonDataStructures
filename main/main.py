@@ -1,6 +1,5 @@
 from Parser.parser import parser
 import logging
-from click._compat import raw_input
 import subprocess
 
 
@@ -10,11 +9,12 @@ time = 0
 print("waiting")
 while write.poll() is None:
     time += 1
+# Read document and convert all commands into a single line
 with open('editor.txt', 'r') as input:
     lines = input.readlines()
     textToAnalyze ='\t'.join([line.strip() for line in lines])
     print(textToAnalyze)
-
+# Set up debugger for parser
 logging.basicConfig(
     level=logging.DEBUG,
     filename="parselog.txt",
@@ -23,6 +23,7 @@ logging.basicConfig(
 )
 log = logging.getLogger()
 count = 0
+# Process file
 while True:
     try:
         if count == 0:
@@ -34,4 +35,5 @@ while True:
     if not s: continue
     result = parser.parse(s, debug=log)
     print(result)
+    print('FINISHED PROCESSING INPUT FILE')
     break
