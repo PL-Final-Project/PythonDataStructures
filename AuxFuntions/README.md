@@ -4,7 +4,7 @@ This folder contains the different methods the code can execute in the different
  - Clear
  - Contains
  - Get
- - Get Index
+ - Get (index)
  - Print
  - Remove (obj and index)
  - Remove all (obj)
