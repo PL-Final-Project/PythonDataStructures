@@ -29,7 +29,10 @@ In order to implement these data structures, every team member decided to code a
 In order to run PyDa, you need to have Python 3.6 downloaded and the IDE of your preference. After importing the files, click the run button. A text file should pop up, in which you can write the code following the video examples. After saving and closing the text file, check your IDE terminal to see the results. 
 
 
-## Explanation video
+## Explanation Video
 https://youtu.be/6pLasa-AJlY
+
+## Promotional Video
+https://youtu.be/--sI0WtUSDE
 
 
