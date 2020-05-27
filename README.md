@@ -30,9 +30,9 @@ In order to run PyDa, you need to have Python 3.6 downloaded and the IDE of your
 
 
 ## Explanation Video
-https://youtu.be/6pLasa-AJlY
+[Explantation video](https://youtu.be/6pLasa-AJlY)
 
 ## Promotional Video
-https://youtu.be/--sI0WtUSDE
+[Promo video](https://youtu.be/--sI0WtUSDE)
 
 
